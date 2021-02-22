@@ -1,8 +1,3 @@
-<!--
-Schema: https://schema.org/docs/schemas.html
-h-format: http://microformats.org/wiki/h-resume
-Testing: https://search.google.com/structured-data/testing-tool/u/0/
--->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,40 +6,70 @@ Testing: https://search.google.com/structured-data/testing-tool/u/0/
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Include relevant metadata -->
     <!-- Print stylesheet -->
-    <title>Jack Y. Araz Resumé</title>
+    <title>Jack Y. Araz Resume</title>
   </head>
-  <body>
+  <body class="h-resume">
     <aside>
       <img
         src="https://www.fillmurray.com/g/250/250"
         alt="Fill Murray placeholder"
+        class="u-photo"
       />
       <section>
         <h2>Contact</h2>
-        <address>
-          Institute for Particle Physics Phenomenology Office: OC209a Durham
-          University South Road Durham DH1 3LE, UK
+        <address class="h-adr p-adr">
+          <span class="p-name"
+            >Institute for Particle Physics Phenomenology Office: OC209a Durham
+            University</span
+          >
+          <span class="p-street-address">South Road</span>
+          <span class="p-locality">Durham</span>
+          <span class="p-postal-code">DH1 3LE</span>,
+          <span class="p-country-name">UK</span>
         </address>
         <ul>
-          <li>Email: jack.araz@durham.ac.uk</li>
-          <li>INSPIRE: Araz, Jack Y.</li>
-          <li>ORCID: 0000-0001-8721-8042</li>
-          <li>GitHub: jackaraz</li>
-          <li>GitLab: jackaraz</li>
-          <li>LinkedIn: Jack Araz</li>
+          <li>
+            <a class="u-email" href="mailto:jack.araz@durham.ac.uk"
+              >Email: jack.araz@durham.ac.uk</a
+            >
+          </li>
+          <li>
+            <a class="u-url" href="https://inspirehep.net/authors/1599325"
+              >INSPIRE: Araz, Jack Y.</a
+            >
+          </li>
+          <li>
+            <a class="u-url" href="https://orcid.org/0000-0001-8721-8042"
+              >ORCID: 0000-0001-8721-8042</a
+            >
+          </li>
+          <li>
+            <a class="u-url" href="https://github.com/jackaraz"
+              >GitHub: jackaraz</a
+            >
+          </li>
+          <li>
+            <a class="u-url" href="https://gitlab.com/jackaraz"
+              >GitLab: jackaraz</a
+            >
+          </li>
+          <li>
+            LinkedIn: <a href="https://uk.linkedin.com/in/jackaraz"></a>Jack
+            Araz
+          </li>
         </ul>
       </section>
       <section>
         <h2>Languages</h2>
         <ul>
-          <li>Turkish: mother tongue</li>
-          <li>English: professional proficiency</li>
+          <li class="p-skill">Turkish: mother tongue</li>
+          <li class="p-skill">English: professional proficiency</li>
         </ul>
       </section>
     </aside>
     <header>
-      <h1>Jack Y. Araz</h1>
-      <h2>Postdoctoral Research Assistant</h2>
+      <h1 class="p-name">Jack Y. Araz</h1>
+      <h2 class="p-job-title">Postdoctoral Research Assistant</h2>
     </header>
     <main>
       <section>
