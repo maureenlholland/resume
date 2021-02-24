@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/maureenlholland/resume/issues"
   },
-  "homepage": "https://github.com/maureenlholland/resume#readme"
+  "homepage": "https://github.com/maureenlholland/resume#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.1"
+  }
 }
