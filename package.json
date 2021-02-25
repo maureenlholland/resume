@@ -20,7 +20,6 @@
     "homepage": "https://github.com/maureenlholland/resume#readme",
     "devDependencies": {
         "@11ty/eleventy": "^0.11.1",
-        "prettier": "2.2.1",
-        "prettier-plugin-nunjucks": "git+https://github.com/justrhysism/prettier-plugin-nunjucks.git"
+        "prettier": "2.2.1"
     }
 }
