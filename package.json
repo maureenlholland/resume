@@ -1,25 +1,26 @@
 {
-  "name": "jack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "npx eleventy --serve",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maureenlholland/resume.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/maureenlholland/resume/issues"
-  },
-  "homepage": "https://github.com/maureenlholland/resume#readme",
-  "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
-    "prettier": "2.2.1"
-  }
+    "name": "jack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npx eleventy --serve",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maureenlholland/resume.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/maureenlholland/resume/issues"
+    },
+    "homepage": "https://github.com/maureenlholland/resume#readme",
+    "devDependencies": {
+        "@11ty/eleventy": "^0.11.1",
+        "prettier": "2.2.1",
+        "prettier-plugin-nunjucks": "git+https://github.com/justrhysism/prettier-plugin-nunjucks.git"
+    }
 }
