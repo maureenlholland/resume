@@ -6,11 +6,12 @@
   />
   <section class="p-contact">
     <h2>Contact</h2>
-    {% include "./address.njk" %}
+    {% include "./contactAddress.njk" %}
     {% include "./contactLinks.njk" %}
   </section>
   <section>
     <h2>Languages</h2>
-    {% include "./languages.njk" %}
+    {% set skillSet = skills.languages %}
+    {% include "./skills.njk" %}
   </section>
 </aside>

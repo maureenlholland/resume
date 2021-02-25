@@ -65,18 +65,11 @@
   <section>
     <h2>Other Skills</h2>
     <h3>Programming</h3>
-    <ul>
-      <li class="p-skill">Python</li>
-      <li class="p-skill">C++</li>
-      <li class="p-skill">Latex</li>
-      <li class="p-skill">Fortran</li>
-      <li class="p-skill">Bash script</li>
-    </ul>
+    {% set skillSet = skills.programming %}
+    {% include "./skills.njk" %}
     <h3>Operating Systems</h3>
-    <ul>
-      <li class="p-skill">Linux (Debian)</li>
-      <li class="p-skill">Operating Systems</li>
-    </ul>
+    {% set skillSet = skills.OS %}
+    {% include "./skills.njk" %}
   </section>
   <section>
     <h2 class="p-category">Talks and Workshops</h2>
