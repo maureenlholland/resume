@@ -1,5 +1,9 @@
-<ul>
-    {% for skill in skillSet %}
-        <li class="p-skill">{{ skill }}</li>
-    {% endfor %}
-</ul>
+<section>
+    <h2>Other Skills</h2>
+    <h3>Programming</h3>
+    {% set skillSet = skills.programming %}
+    {% include "./skillList.njk" %}
+    <h3>Operating Systems</h3>
+    {% set skillSet = skills.OS %}
+    {% include "./skillList.njk" %}
+  </section>

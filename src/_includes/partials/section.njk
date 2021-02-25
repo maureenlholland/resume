@@ -1,0 +1,40 @@
+{% macro section(collection, type) %}
+<section>
+    {# need to have collection name meta data or something for heading #}
+    <h2 class="{{ "p-category" if type === "experience" }}">{{ collection }}</h2>
+    <ol>
+      <li class="p-{{ type }} h-event">
+        <article>
+          <p>
+            <span class="dt-start" datetime="2014-01-01">2014</span>
+            {% if collection.endDate %}
+                - <span class="dt-end" datetime="2020-01-01">2020</span>
+            {% endif %}
+          </p>
+          <h3 class="p-name">PhD in Theoretical High Energy Physics</h3>
+          <p class="p-org h-card">
+            <span class="p-name">Concordia University</span>,
+            <span class="p-locality">Montréal</span>,
+            {# needs to adjust between span and abbr depending on data #}
+            {% if collection.region.abbr %}
+                <abbr class="p-region" title="Québec">QC</abbr>,
+            {% else %}
+                <span class="p-region">Québec</span>,
+            {% endif %}
+            {% if collection.country.abbr %}
+                <abbr class="p-country" title="Canada">CA</abbr>.
+            {% else %}
+                <abbr class="p-country">Canada</abbr>.
+            {% endif %}
+            {% if collection.note %}
+                <span class="p-note">PI: M. Frank</span>
+            {% endif %}
+            {% if collection.summary %}
+                <span class="p-summary">A summary of this experience</span>
+            {% endif %}
+          </p>
+        </article>
+      </li>
+    </ol>
+  </section>
+{% endmacro %}
