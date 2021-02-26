@@ -1,40 +1,43 @@
-{% macro section(collection, type) %}
+{% macro section(collection) %}
 <section>
+  {% set title = collection[0].data.title %}
+  {% set type = collection[0].data.type %}
     {# need to have collection name meta data or something for heading #}
-    <h2 class="{{ "p-category" if type === "experience" }}">{{ collection }}</h2>
+    <h2 class="{{ "p-category" if type === "experience" }}">{{ title }}</h2>
     <ol>
+      {% for item in collection %}
       <li class="p-{{ type }} h-event">
         <article>
           <p>
-            <span class="dt-start" datetime="2014-01-01">2014</span>
-            {% if collection.endDate %}
-                - <span class="dt-end" datetime="2020-01-01">2020</span>
+            <span class="dt-start" datetime="2014-01-01">{{ item.data.startDate }}</span>
+            {% if item.data.endDate %}
+                - <span class="dt-end" datetime="2020-01-01">{{ item.data.endDate }}</span>
             {% endif %}
           </p>
-          <h3 class="p-name">PhD in Theoretical High Energy Physics</h3>
+          <h3 class="p-name">{{ item.data.name }}</h3>
+          {# set organization #}
+          {# include organization macro template, pass in organization #}
           <p class="p-org h-card">
-            <span class="p-name">Concordia University</span>,
+            <span class="p-name">{{ organization.data.name }}</span>,
             <span class="p-locality">Montréal</span>,
             {# needs to adjust between span and abbr depending on data #}
-            {% if collection.region.abbr %}
+            {% if organization.data.region.abbr %}
                 <abbr class="p-region" title="Québec">QC</abbr>,
             {% else %}
                 <span class="p-region">Québec</span>,
             {% endif %}
-            {% if collection.country.abbr %}
+            {% if organization.data.country.abbr %}
                 <abbr class="p-country" title="Canada">CA</abbr>.
             {% else %}
                 <span class="p-country">Canada</span>.
             {% endif %}
-            {% if collection.note %}
-                <span class="p-note">PI: M. Frank</span>
-            {% endif %}
-            {% if collection.summary %}
-                <span class="p-summary">A summary of this experience</span>
+            {% if item.templateContent %}
+                <span class="p-summary">{{ item.templateContent | safe }}</span>
             {% endif %}
           </p>
         </article>
       </li>
+      {% endfor %}
     </ol>
   </section>
 {% endmacro %}

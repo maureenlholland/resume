@@ -1,11 +1,11 @@
-{% import "./section.njk" as content %}
+{% import "./section.njk" as content with context %}
 
 <main>
-  {{ content.section('education', 'education') }}
-  {{ content.section('research', 'experience') }}
-  {{ content.section('teaching', 'experience') }}
+  {{ content.section(collections.education) }}
+  {# {{ content.section('research') }}
+  {{ content.section('teaching') }}
   {% include "./skills.njk" %}
-  {{ content.section('talks', 'experience') }}
-  {{ content.section('grants', 'experience') }}
-  {{ content.section('outreach', 'experience') }}
+  {{ content.section('talks') }}
+  {{ content.section('grants') }}
+  {{ content.section('outreach') }} #}
 </main>
