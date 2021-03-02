@@ -11,7 +11,7 @@ sections:
   match: "**/*"
   new_doc_ext: json
 - type: directory
-  path: education
+  path: src/education
   label: Education
   create: documents
   match: "**/*.md"
