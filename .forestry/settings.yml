@@ -10,7 +10,7 @@ sections:
   create: documents
   match: "*.md"
 - type: document
-  path: _data/header.json
+  path: "./_data/header.json"
   label: Header
 - type: document
   path: _data/contact.json
