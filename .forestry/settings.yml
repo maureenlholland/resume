@@ -4,6 +4,11 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url: 
 sections:
+- type: directory
+  path: education
+  label: Education
+  create: documents
+  match: "*.md"
 - type: document
   path: _data/header.json
   label: Header
