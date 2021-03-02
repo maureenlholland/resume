@@ -5,19 +5,16 @@ admin_path: "/admin"
 webhook_url: 
 sections:
 - type: directory
+  path: _data
+  label: Data
+  create: documents
+  match: "**/*"
+  new_doc_ext: ".json"
+- type: directory
   path: education
   label: Education
   create: documents
   match: "*.md"
-- type: document
-  path: "./_data/header.json"
-  label: Header
-- type: document
-  path: _data/contact.json
-  label: Contact
-- type: document
-  path: _data/skills.json
-  label: Skills
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
