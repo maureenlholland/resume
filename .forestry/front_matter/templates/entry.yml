@@ -10,7 +10,7 @@ fields:
       options: []
       source:
         type: custom
-        section: sectionTitles
+        section: sections
         file: src/_data/site.json
   - name: title
     default: ""
