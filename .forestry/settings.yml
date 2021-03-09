@@ -2,22 +2,19 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: "/admin"
-webhook_url: 
+webhook_url:
 sections:
-- type: directory
-  path: src/_data
-  label: Data
-  create: documents
-  match: "**/*"
-  new_doc_ext: json
-- type: directory
-  path: src/education
-  label: Education
-  create: documents
-  match: "**/*.md"
+  - type: document
+    label: Contact
+    path: src/_data/contact.json
+  - type: directory
+    path: src/education
+    label: Education
+    create: documents
+    match: "**/*.md"
 upload_dir: uploads
 public_path: "/uploads"
-front_matter_path: ''
+front_matter_path: ""
 use_front_matter_path: false
 file_template: ":filename:"
 build:
