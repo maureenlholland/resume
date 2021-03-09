@@ -9,7 +9,7 @@ fields:
       required: true
       options: []
       source:
-        type: documents
+        type: pages
         section: sections
         file: src/_data/site.json
   - name: title
