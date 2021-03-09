@@ -1,4 +1,9 @@
 {
-"title": "Jack Y. Araz Resume",
-"sections": ["Education", "Research Experience", "Teaching Experience"]
+  "title": "Jack Y. Araz Resume",
+  "sections": [
+    "Education",
+    "Research Experience",
+    "Teaching Experience",
+    "Talks & Workshops"
+  ]
 }
