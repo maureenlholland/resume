@@ -22,8 +22,7 @@ fields:
   config:
     required: true
 - name: Type
-  default:
-  - Experience
+  default: Experience
   label: Type
   hidden: false
   type: select
