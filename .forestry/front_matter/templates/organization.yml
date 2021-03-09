@@ -42,3 +42,4 @@ fields:
   type: text
 pages:
 - src/organizations/concordia-university.json
+- src/organizations/ippp-durham-university.json
