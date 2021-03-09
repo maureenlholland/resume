@@ -1,6 +1,4 @@
 ---
-pages:
-  - index.md
 hide_body: false
 fields:
   - name: title
@@ -13,10 +11,16 @@ fields:
     label: Date
     hidden: false
     type: datetime
-  - name: Categories
-    default: []
-    label: Categories
+  - name: Type
+    default: ["Experience"]
+    label: Type
     hidden: false
-    type: list
+    type: select
+    config:
+      source:
+        type: custom
+      options:
+        - "Education"
+        - "Experience"
 ---
 
