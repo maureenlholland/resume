@@ -9,7 +9,7 @@ fields:
       required: true
       options: []
       source:
-        type: pages
+        type: custom
         section: sectionTitles
         file: src/_data/site.md
   - name: title
