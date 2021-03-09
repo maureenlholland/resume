@@ -1,6 +1,6 @@
 ---
 label: Organization
-hide_body: false
+hide_body: true
 fields:
   - name: title
     default: ""
@@ -9,18 +9,6 @@ fields:
     type: text
     config:
       required: true
-  - name: address1
-    default: ""
-    label: Street Address 1
-    hidden: false
-    type: text
-    config:
-      required: true
-  - name: address2
-    default: ""
-    label: Street Address 2
-    hidden: false
-    type: text
   - name: city
     default: ""
     label: City
