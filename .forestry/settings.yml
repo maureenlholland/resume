@@ -27,7 +27,7 @@ sections:
     match: "**/*.md"
     new_doc_ext: ".md"
     templates:
-      - entry
+      - homepage
   - type: directory
     path: src/organizations
     label: Organizations

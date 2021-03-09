@@ -1,5 +1,7 @@
-entry.yml
+homepage.yml
 ---
+pages:
+  - index.md
 hide_body: false
 fields:
   - name: title
@@ -12,16 +14,10 @@ fields:
     label: Date
     hidden: false
     type: datetime
-  - type: select
-    name: type
-    label: Type
-    description: Select a type for better SEO response
+  - name: Categories
+    default: []
+    label: Categories
     hidden: false
-    config:
-      source:
-        type: custom
-      options:
-        - "Education"
-        - "Experience"
+    type: list
 ---
 
