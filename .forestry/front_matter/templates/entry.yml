@@ -10,7 +10,7 @@ fields:
       required: true
       options: []
       source:
-        type: custom
+        type: documents
         section: sections
         file: src/_data/sections.json
   - name: title
