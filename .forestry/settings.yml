@@ -5,21 +5,21 @@ admin_path: "/admin"
 webhook_url:
 sections:
   - type: heading
-    label: Global
-  - type: document
     label: General
-    path: src/_data/general.json
+  - type: document
+    label: Site
+    path: src/_data/site.json
   - type: document
     label: Header
     path: src/_data/header.json
   - type: document
     label: Contact
     path: src/_data/contact.json
+  - type: heading
+    label: Main Content
   - type: document
     label: Skills
     path: src/_data/skills.json
-  - type: heading
-    label: Main Content
   - type: directory
     path: src/entries
     label: Entries
