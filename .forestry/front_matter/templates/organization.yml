@@ -2,44 +2,42 @@
 label: Organization
 hide_body: true
 fields:
-- name: title
-  default: ''
-  label: Title
-  hidden: false
-  type: text
-  config:
-    required: true
-- name: city
-  default: ''
-  label: City
-  hidden: false
-  type: text
-  config:
-    required: true
-- name: region
-  default: ''
-  label: Region
-  hidden: false
-  type: text
-  config:
-    required: true
-- name: regionAbbr
-  default: ''
-  label: Region Abbreviation
-  hidden: false
-  type: text
-- name: country
-  default: ''
-  label: Country
-  hidden: false
-  type: text
-  config:
-    required: true
-- name: countryAbbr
-  default: ''
-  label: Country Abbreviation
-  hidden: false
-  type: text
+  - name: title
+    default: ""
+    label: Title
+    hidden: false
+    type: text
+    config:
+      required: true
+  - name: city
+    default: ""
+    label: City
+    hidden: false
+    type: text
+  - name: region
+    default: ""
+    label: Region
+    hidden: false
+    type: text
+    config:
+      required: true
+  - name: regionAbbr
+    default: ""
+    label: Region Abbreviation
+    hidden: false
+    type: text
+  - name: country
+    default: ""
+    label: Country
+    hidden: false
+    type: text
+    config:
+      required: true
+  - name: countryAbbr
+    default: ""
+    label: Country Abbreviation
+    hidden: false
+    type: text
 pages:
-- src/organizations/concordia-university.json
-- src/organizations/ippp-durham-university.json
+  - src/organizations/concordia-university.json
+  - src/organizations/ippp-durham-university.json
