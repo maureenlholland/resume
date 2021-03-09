@@ -1,11 +1,24 @@
 ---
 hide_body: false
 fields:
+  - name: displaySection
+    label: Section
+    description: Select section that describes entry category
+    type: select
+    config:
+      required: true
+      options: []
+      source:
+        type: documents
+        section: sections
+        file: src/_data/site.json
   - name: title
     default: ""
     label: Title
     hidden: false
     type: text
+    config:
+      required: true
   - name: publishDate
     default: ""
     label: Date
@@ -22,5 +35,17 @@ fields:
       options:
         - "Education"
         - "Experience"
+  - name: startDate
+    default: ""
+    label: Start Date
+    hidden: false
+    type: datetime
+    config:
+      required: true
+  - name: endDate
+    default: ""
+    label: End Date
+    hidden: false
+    type: datetime
 ---
 
