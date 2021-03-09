@@ -2,60 +2,60 @@
 label: Entry
 hide_body: true
 fields:
-  - name: section
-    label: Section
-    description: Select section heading that describes entry category
-    type: select
-    config:
-      required: true
-      options: []
-      source:
-        type: documents
-        section: sections
-        file: src/_data/sections.json
-        path: sections
-  - name: title
-    default: ""
-    label: Title
-    hidden: false
-    type: text
-    config:
-      required: true
-  - name: startDate
-    default: ""
-    label: Start Date
-    hidden: false
-    type: datetime
-    config:
-      required: true
-      date_format: MMM DD, YYYY
-      time_format:
-      display_utc: false
-      export_format: YYYY-MM-DDThh:mm:ssZ
-  - name: endDate
-    default: ""
-    label: End Date
-    hidden: false
-    type: datetime
-    config:
-      date_format: MMM DD, YYYY
-      time_format:
-      display_utc: false
-      export_format: YYYY-MM-DDThh:mm:ssZ
-  - name: organization
-    label: Organization
-    type: select
-    config:
-      required: true
-      options: []
-      source:
-        type: pages
-        section: organizations
-  - name: notes
-    default: ""
-    label: Notes
-    hidden: false
-    type: text
+- name: section
+  label: Section
+  description: Select section heading that describes entry category
+  type: select
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: sections
+      file: src/_data/sections.json
+      path: sections
+- name: title
+  default: ''
+  label: Title
+  hidden: false
+  type: text
+  config:
+    required: true
+- name: startDate
+  default: ''
+  label: Start Date
+  hidden: false
+  type: datetime
+  config:
+    required: true
+    date_format: MMM DD, YYYY
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DDThh:mm:ssZ
+- name: endDate
+  default: ''
+  label: End Date
+  hidden: false
+  type: datetime
+  config:
+    date_format: MMM DD, YYYY
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DDThh:mm:ssZ
+- name: organization
+  label: Organization
+  type: select
+  config:
+    required: true
+    options: []
+    source:
+      type: pages
+      section: organizations
+- name: notes
+  default: ''
+  label: Notes
+  hidden: false
+  type: text
 pages:
-  - src/entries/phd-in-theoretical-high-energy-physics.json
-  - src/entries/postdoctoral-research-associate.json
+- src/entries/phd-in-theoretical-high-energy-physics.json
+- src/entries/postdoctoral-research-associate.json
