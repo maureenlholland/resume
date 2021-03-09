@@ -4,29 +4,31 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url:
 sections:
+  - type: heading
+    label: Global
   - type: document
-    heading: General
+    label: General
+    path: src/_data/general.json
+  - type: document
     label: Header
     path: src/_data/header.json
   - type: document
-    heading: General
     label: Contact
     path: src/_data/contact.json
   - type: document
-    heading: Main
     label: Skills
     path: src/_data/skills.json
+  - type: heading
+    label: Main Content
   - type: directory
-    heading: Main
     path: src/entries
     label: Entries
     create: documents
     match: "**/*.md"
     new_doc_ext: ".md"
   - type: directory
-    heading: Main
-    path: src/entries
-    label: Entries
+    path: src/organizations
+    label: Organizations
     create: documents
     match: "**/*.json"
     new_doc_ext: ".json"
