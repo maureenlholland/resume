@@ -2,50 +2,50 @@
 label: entry
 hide_body: false
 fields:
-- name: sectionTitle
-  label: Section
-  description: Select section that describes entry category
-  type: select
-  config:
-    required: true
-    options: []
-    source:
-      type: custom
-      section: sections
-      file: src/_data/site.json
-- name: title
-  default: ''
-  label: Title
-  hidden: false
-  type: text
-  config:
-    required: true
-- name: publishDate
-  default: ''
-  label: Date
-  hidden: false
-  type: datetime
-- name: Type
-  default:
-  - Experience
-  label: Type
-  hidden: false
-  type: select
-  config:
-    source:
-      type: custom
-    options:
-    - Education
-    - Experience
-- name: startDate
-  default: ''
-  label: Start Date
-  hidden: false
-  type: datetime
-  config:
-    required: true
-- name: endDate
-  default: ''
-  label: End Date
-  hidden: false
-  type: datetime
+  - name: sections
+    label: Section
+    description: Select section that describes entry category
+    type: select
+    config:
+      required: true
+      options: []
+      source:
+        type: custom
+        section: sections
+        file: src/_data/site.json
+  - name: title
+    default: ""
+    label: Title
+    hidden: false
+    type: text
+    config:
+      required: true
+  - name: publishDate
+    default: ""
+    label: Date
+    hidden: false
+    type: datetime
+  - name: Type
+    default:
+      - Experience
+    label: Type
+    hidden: false
+    type: select
+    config:
+      source:
+        type: custom
+      options:
+        - Education
+        - Experience
+  - name: startDate
+    default: ""
+    label: Start Date
+    hidden: false
+    type: datetime
+    config:
+      required: true
+  - name: endDate
+    default: ""
+    label: End Date
+    hidden: false
+    type: datetime
