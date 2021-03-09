@@ -2,43 +2,43 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: "/admin"
-webhook_url:
+webhook_url: 
 sections:
-  - type: heading
-    label: General
-  - type: document
-    path: src/_data/sections.json
-    label: Sections
-  - type: document
-    path: src/_data/header.json
-    label: Header
-  - type: document
-    path: src/_data/contact.json
-    label: Contact
-  - type: heading
-    label: Main Content
-  - type: document
-    path: src/_data/skills.json
-    label: Skills
-  - type: directory
-    path: src/entries
-    label: Entries
-    create: documents
-    match: "**/*.json"
-    new_doc_ext: json
-    templates:
-      - entry
-  - type: directory
-    path: src/organizations
-    label: Organizations
-    create: documents
-    match: "**/*.json"
-    new_doc_ext: json
-    templates:
-      - organization
+- type: heading
+  label: General
+- type: document
+  path: src/_data/sections.json
+  label: Sections
+- type: document
+  path: src/_data/header.json
+  label: Header
+- type: document
+  path: src/_data/contact.json
+  label: Contact
+- type: heading
+  label: Main Content
+- type: document
+  path: src/_data/skills.json
+  label: Skills
+- type: directory
+  path: src/entries
+  label: Entries
+  create: documents
+  match: "**/*.json"
+  new_doc_ext: json
+  templates:
+  - entry
+- type: directory
+  path: src/organizations
+  label: Organizations
+  create: documents
+  match: "**/*.json"
+  new_doc_ext: json
+  templates:
+  - organization
 upload_dir: uploads
 public_path: "/uploads"
-front_matter_path: ""
+front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
