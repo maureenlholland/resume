@@ -11,7 +11,7 @@ fields:
       source:
         type: custom
         section: sectionTitles
-        file: src/_data/site.md
+        file: src/_data/site.json
   - name: title
     default: ""
     label: Title

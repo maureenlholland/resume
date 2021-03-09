@@ -8,7 +8,7 @@ sections:
     label: General
   - type: document
     label: Site
-    path: src/_data/site.md
+    path: src/_data/site.json
   - type: document
     label: Header
     path: src/_data/header.json
@@ -19,7 +19,7 @@ sections:
     label: Main Content
   - type: document
     label: Skills
-    path: src/_data/skills.md
+    path: src/_data/skills.json
   - type: directory
     path: src/entries
     label: Entries
