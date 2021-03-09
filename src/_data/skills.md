@@ -1,0 +1,14 @@
+---
+  languages: 
+    - "Turkish: mother tongue"
+    - "English: professional proficiency"
+  programming: 
+    - "Python"
+    - "C++"
+    - "Latex"
+    - "Fortran"
+    - "Bash script"
+  OS: 
+    - "Linux (Debian)"
+    - "MacOS"
+---

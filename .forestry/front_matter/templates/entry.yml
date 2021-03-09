@@ -1,7 +1,7 @@
 ---
 hide_body: false
 fields:
-  - name: displaySection
+  - name: sectionTitle
     label: Section
     description: Select section that describes entry category
     type: select
@@ -10,8 +10,8 @@ fields:
       options: []
       source:
         type: pages
-        section: sections
-        file: src/_data/site.json
+        section: sectionTitles
+        file: src/_data/site.md
   - name: title
     default: ""
     label: Title
