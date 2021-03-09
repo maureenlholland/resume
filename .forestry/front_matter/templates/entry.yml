@@ -1,6 +1,6 @@
 ---
 label: Entry
-hide_body: false
+hide_body: true
 fields:
   - name: section
     label: Section
