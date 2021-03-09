@@ -5,8 +5,14 @@ admin_path: "/admin"
 webhook_url:
 sections:
   - type: document
+    label: Header
+    path: src/_data/header.json
+  - type: document
     label: Contact
     path: src/_data/contact.json
+  - type: document
+    label: Skills
+    path: src/_data/skills.json
   - type: directory
     path: src/education
     label: Education
