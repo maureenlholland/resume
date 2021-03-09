@@ -2,9 +2,9 @@
 label: entry
 hide_body: false
 fields:
-  - name: sections
+  - name: section
     label: Section
-    description: Select section that describes entry category
+    description: Select section heading that describes entry category
     type: select
     config:
       required: true
@@ -12,7 +12,7 @@ fields:
       source:
         type: custom
         section: sections
-        file: src/_data/site.json
+        file: src/_data/sections.json
   - name: title
     default: ""
     label: Title
