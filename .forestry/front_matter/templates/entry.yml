@@ -2,18 +2,6 @@
 label: Entry
 hide_body: false
 fields:
-- name: section
-  label: Section
-  description: Select section heading that describes entry category
-  type: select
-  config:
-    required: true
-    options: []
-    source:
-      type: documents
-      section: sections
-      file: src/_data/sections.json
-      path: sections
 - name: title
   default: ''
   label: Title
