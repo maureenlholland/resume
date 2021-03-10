@@ -1,7 +1,7 @@
 <aside>
   <img
-    src="./images/fill-murray.jpg"
-    alt="Fill Murray placeholder"
+    src="{{ general.image | url }}"
+    alt="{{ general.name }}"
     class="u-photo"
   />
   <section class="p-contact">
@@ -11,7 +11,10 @@
   </section>
   <section>
     <h2>Languages</h2>
-    {% set skillSet = skills.languages %}
-    {% include "./skillList.njk" %}
+    <ul>
+    {% for language in general.languages %}
+        <li class="p-skill">{{ language.name }}: {{ language.level }}</li>
+    {% endfor %}
+</ul>
   </section>
 </aside>

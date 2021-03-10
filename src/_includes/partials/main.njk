@@ -1,7 +1,8 @@
 {% import "./section.njk" as content with context %}
 
 <main>
-  {{ content.section(collections.education) }}
+  {# will replace with sections loop for user-determined order #}
+  {{ content.section("education", collections) }}
   {# {{ content.section('research') }}
   {{ content.section('teaching') }}
   {% include "./skills.njk" %}

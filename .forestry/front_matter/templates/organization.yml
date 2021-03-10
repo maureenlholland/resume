@@ -2,29 +2,29 @@
 label: Organization
 hide_body: true
 fields:
-- type: text
-  name: title
-  label: Title
-  config:
-    required: true
-- type: text
-  name: city
-  label: City
-- type: text
-  name: region
-  label: Region
-  config:
-    required: true
-- type: text
-  name: regionAbbr
-  label: Region Abbreviation
-- type: text
-  name: country
-  label: Country
-  config:
-    required: true
-- type: text
-  name: countryAbbr
-  label: Country Abbreviation
+  - type: text
+    name: title
+    label: Title
+    config:
+      required: true
+  - type: text
+    name: city
+    label: City
+  - type: text
+    name: region
+    label: Region
+    config:
+      required: true
+  - type: text
+    name: regionAbbr
+    label: Region Abbreviation
+  - type: text
+    name: country
+    label: Country
+    config:
+      required: true
+  - type: text
+    name: countryAbbr
+    label: Country Abbreviation
 pages:
-- src/organizations/mcgill-university.json
+  - src/organizations/mcgill-university.md
