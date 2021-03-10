@@ -9,6 +9,17 @@ sections:
   label: General
 - type: heading
   label: Sections
+- type: document
+  path: src/_data/sections.json
+  label: Configuration
+  match: "**/*"
+- type: directory
+  path: src/entries/education
+  label: Education
+  create: documents
+  match: "**/*"
+  templates:
+  - entry
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
