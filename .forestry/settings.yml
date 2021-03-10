@@ -12,10 +12,16 @@ sections:
 - type: document
   path: src/_data/sections.json
   label: Configuration
-  match: "**/*"
 - type: directory
   path: src/entries/education
   label: Education
+  create: documents
+  match: "**/*"
+  templates:
+  - entry
+- type: directory
+  path: src/entries/research
+  label: Research
   create: documents
   match: "**/*"
   templates:
