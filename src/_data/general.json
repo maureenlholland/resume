@@ -32,11 +32,12 @@
   "languages": [
     {
       "name": "Turkish",
-      "level": "Mother tongue"
+      "level": "Mother Tongue"
     },
     {
       "name": "English",
       "level": "Professional proficiency"
     }
-  ]
+  ],
+  "image": ""
 }
