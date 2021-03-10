@@ -1,6 +1,11 @@
 {
   "sections": [
     {
+      "title": "Teaching Experience",
+      "type": "experience",
+      "folder": "teaching"
+    },
+    {
       "title": "Education",
       "type": "education",
       "folder": "education"
