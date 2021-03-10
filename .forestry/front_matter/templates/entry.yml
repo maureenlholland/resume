@@ -58,4 +58,3 @@ fields:
   type: text
 pages:
 - src/entries/phd-in-theoretical-high-energy-physics.json
-- src/entries/postdoctoral-research-associate.json
