@@ -1,0 +1,36 @@
+---
+label: General
+hide_body: true
+fields:
+- type: text
+  name: name
+  label: name
+- type: text
+  name: job
+  label: job
+- type: text
+  name: email
+  label: email
+- type: field_group_list
+  name: links
+  label: links
+  fields:
+  - type: text
+    name: affiliation
+    label: affiliation
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: link
+    label: link
+- type: field_group_list
+  name: languages
+  label: languages
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: level
+    label: level
