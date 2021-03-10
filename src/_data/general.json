@@ -1,4 +1,6 @@
 {
+  "name": "Jack Y. Araz",
+  "job": "Postdoctoral Research Assistant",
   "email": "jack.araz@durham.ac.uk",
   "links": [
     {
@@ -25,6 +27,16 @@
       "affiliation": "LinkedIn",
       "name": "Jack Araz",
       "link": "https://uk.linkedin.com/in/jackaraz"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Turkish",
+      "level": "Mother tongue"
+    },
+    {
+      "name": "English",
+      "level": "Professional proficiency"
     }
   ]
 }
