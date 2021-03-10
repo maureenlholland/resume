@@ -1,0 +1,5 @@
+---
+type: education
+title: Education
+
+---

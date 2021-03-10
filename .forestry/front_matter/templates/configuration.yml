@@ -23,3 +23,5 @@ fields:
       path: 
   label: Type
   description: Type of entry (for SEO)
+pages:
+- src/entries/Education/education.md
