@@ -2,27 +2,26 @@
 label: Configuration
 hide_body: true
 fields:
-- name: title
-  type: text
-  config:
-    required: false
-  label: Title
-  description: What is the section title for these entries
-- name: type
-  type: select
-  default: []
-  config:
-    required: true
-    options:
-    - education
-    - " experience"
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Type
-  description: Type of entry (for SEO)
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: type
+    type: select
+    default: []
+    config:
+      required: true
+      options:
+        - education
+        - experience
+      source:
+        type: simple
+        section:
+        file:
+        path:
+    label: Type
+    description: Needed for SEO
 pages:
-- src/entries/Education/education.md
-- src/entries/research/research-experience.md
+  - src/entries/education/education.md
+  - src/entries/research/research-experience.md
