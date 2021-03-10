@@ -12,7 +12,7 @@ sections:
   label: Organizations
   create: documents
   match: "**/*.json"
-  new_doc_ext: ".json"
+  new_doc_ext: json
 - type: heading
   label: Sections
 - type: document

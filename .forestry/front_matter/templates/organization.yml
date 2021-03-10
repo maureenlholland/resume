@@ -1,0 +1,22 @@
+---
+label: Organization
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: city
+  label: city
+- type: text
+  name: region
+  label: region
+- type: text
+  name: regionAbbr
+  label: regionAbbr
+- type: text
+  name: country
+  label: country
+- type: text
+  name: countryAbbr
+  label: countryAbbr
