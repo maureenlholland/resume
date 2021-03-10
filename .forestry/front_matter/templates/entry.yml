@@ -37,3 +37,5 @@ fields:
       file: 
       path: 
   label: Organization
+pages:
+- src/entries/education/phd-in-theoretical-high-energy-physics.md
