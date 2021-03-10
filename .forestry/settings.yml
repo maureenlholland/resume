@@ -21,14 +21,6 @@ sections:
   new_doc_ext: json
   templates:
   - organization
-- type: directory
-  path: src/entries
-  label: Entries
-  create: all
-  match: "**/*"
-  templates:
-  - entry
-  - configuration
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''

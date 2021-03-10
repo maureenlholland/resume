@@ -39,5 +39,3 @@ fields:
     source:
       type: pages
       section: organizations
-pages:
-- src/entries/research/postdoctoral-research-associate.md
