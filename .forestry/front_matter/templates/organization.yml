@@ -26,3 +26,5 @@ fields:
 - type: text
   name: countryAbbr
   label: Country Abbreviation
+pages:
+- src/organizations/mcgill-university.json
