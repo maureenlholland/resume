@@ -1,6 +1,11 @@
 {
   "sections": [
     {
+      "title": "Skills",
+      "type": "",
+      "folder": ""
+    },
+    {
       "title": "Education",
       "type": "education",
       "folder": "education"
