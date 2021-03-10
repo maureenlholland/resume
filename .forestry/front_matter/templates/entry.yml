@@ -40,4 +40,5 @@ fields:
       type: pages
       section: organizations
 pages:
+- src/entries/Education/phd-in-theoretical-high-energy-physics.md
 - src/entries/phd-in-theoretical-high-energy-physics.md
