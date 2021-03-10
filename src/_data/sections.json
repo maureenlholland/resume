@@ -1,11 +1,6 @@
 {
   "sections": [
     {
-      "title": "Teaching Experience",
-      "type": "experience",
-      "folder": "teaching"
-    },
-    {
       "title": "Education",
       "type": "education",
       "folder": "education"
@@ -14,6 +9,11 @@
       "title": "Research Experience",
       "type": "experience",
       "folder": "research"
+    },
+    {
+      "title": "Teaching Experience",
+      "type": "experience",
+      "folder": "teaching"
     },
     {
       "title": "Skills",
