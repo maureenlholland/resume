@@ -15,19 +15,9 @@ sections:
 - type: document
   path: src/_data/contact.json
   label: Contact
-- type: heading
-  label: Main Content
 - type: document
   path: src/_data/skills.json
   label: Skills
-- type: directory
-  path: src/entries
-  label: Entries
-  create: documents
-  match: "**/*.json"
-  new_doc_ext: json
-  templates:
-  - entry
 - type: directory
   path: src/organizations
   label: Organizations
@@ -36,6 +26,16 @@ sections:
   new_doc_ext: json
   templates:
   - organization
+- type: heading
+  label: Entries
+- type: directory
+  path: src/entries
+  label: Entries
+  create: documents
+  match: "**/*.json"
+  new_doc_ext: json
+  templates:
+  - entry
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
