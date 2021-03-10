@@ -4,19 +4,25 @@ hide_body: true
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  config:
+    required: true
 - type: text
   name: city
-  label: city
+  label: City
 - type: text
   name: region
-  label: region
+  label: Region
+  config:
+    required: true
 - type: text
   name: regionAbbr
-  label: regionAbbr
+  label: Region Abbreviation
 - type: text
   name: country
-  label: country
+  label: Country
+  config:
+    required: true
 - type: text
   name: countryAbbr
-  label: countryAbbr
+  label: Country Abbreviation
