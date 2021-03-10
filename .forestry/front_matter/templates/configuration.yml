@@ -25,3 +25,4 @@ fields:
   description: Type of entry (for SEO)
 pages:
 - src/entries/Education/education.md
+- src/entries/research/research-experience.md
