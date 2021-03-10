@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: "/admin"
 webhook_url:
 sections:
+  - type: heading
+    label: General
   - type: document
     path: src/_data/header.json
     label: Header
@@ -21,6 +23,23 @@ sections:
     new_doc_ext: json
     templates:
       - organization
+  - type: heading
+    label: Sections
+  - type: document
+    path: src/_data/sections.json
+    label: Configuration
+  - type: directory
+    label: Education
+    path: src/entries/education
+    match: "**/*.md"
+    templates:
+      - entry
+  - type: directory
+    label: Research Experience
+    path: src/entries/research
+    match: "**/*.md"
+    templates:
+      - entry
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ""

@@ -1,10 +1,14 @@
 {
   "sections": [
-    "Education",
-    "Research Experience",
-    "Teaching Experience",
-    "Talks & Workshops",
-    "Grants & Awards",
-    "Outreach & Activities"
+    {
+      "title": "Education",
+      "type": "education",
+      "folder": "education"
+    },
+    {
+      "title": "Research Experience",
+      "type": "experience",
+      "folder": "research"
+    }
   ]
 }
