@@ -34,7 +34,7 @@ fields:
   label: Organization
   type: select
   config:
-    required: true
+    required: false
     options: []
     source:
       type: pages
