@@ -25,11 +25,10 @@ sections:
   path: src/entries
   label: Entries
   create: all
-  match: "**/*.md"
-  new_doc_ext: md
+  match: "**/*"
   templates:
-  - configuration
   - entry
+  - configuration
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
