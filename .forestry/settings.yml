@@ -13,6 +13,8 @@ sections:
   create: documents
   match: "**/*.json"
   new_doc_ext: json
+  templates:
+  - organization
 - type: heading
   label: Sections
 - type: document
@@ -28,6 +30,13 @@ sections:
 - type: directory
   path: src/entries/research
   label: Research
+  create: documents
+  match: "**/*"
+  templates:
+  - entry
+- type: directory
+  path: src/entries/teaching
+  label: Teaching
   create: documents
   match: "**/*"
   templates:
