@@ -51,5 +51,3 @@ fields:
     source:
       type: pages
       section: organizations
-pages:
-- src/entries/education/phd-in-theoretical-high-energy-physics.md
