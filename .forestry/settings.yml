@@ -19,7 +19,7 @@ sections:
   label: Sections
 - type: document
   path: src/_data/sections.json
-  label: Configuration
+  label: Order and Titles
 - type: directory
   path: src/entries/education
   label: Education
