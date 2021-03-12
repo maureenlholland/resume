@@ -1,0 +1,41 @@
+[
+  {
+    "id": "default",
+    "name": "Professional",
+    "colors": {
+      "text": "#000000",
+      "text-offset": "#778899",
+      "background": "#ffffff"
+    },
+    "fonts": {
+      "main": "Ubuntu, sans-serif",
+      "accent": "Fira Sans, sans-serif"
+    }
+  },
+  {
+    "id": "lotr",
+    "name": "Lord of the Rings",
+    "colors": {
+      "text": "#3c1f0f",
+      "text-offset": "#778899",
+      "background": "#d1be9e"
+    },
+    "fonts": {
+      "main": "Ubuntu, sans-serif",
+      "accent": "Serif"
+    }
+  },
+  {
+    "id": "starwars",
+    "name": "Star Wars",
+    "colors": {
+      "text": "#fdd254",
+      "text-offset": "#778899",
+      "background": "#000000"
+    },
+    "fonts": {
+      "main": "Ubuntu, sans-serif",
+      "accent": "Serif"
+    }
+  }
+]

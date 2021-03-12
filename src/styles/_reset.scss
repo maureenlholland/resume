@@ -58,11 +58,12 @@ img {
   display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
+/* Inherit fonts for inputs and buttons (and address) */
 input,
 button,
 textarea,
-select {
+select,
+address {
   font: inherit;
 }
 

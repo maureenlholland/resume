@@ -8,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- TODO: Include relevant metadata -->
     {# see https://www.filamentgroup.com/lab/async-css.html for media="print" explanation #}
+    <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
+    <link rel="stylesheet" media="print" href="/css/themes.css?{{ assetHash }}" onload="this.media='all'" />
     <link rel="stylesheet" media="print" href="/css/main.css?{{ assetHash }}" onload="this.media='all'" />
     <title>{{ site.title }}</title>
   </head>
