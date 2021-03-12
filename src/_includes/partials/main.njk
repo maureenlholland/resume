@@ -2,11 +2,13 @@
 
 <main>
   {# will replace with sections loop for user-determined order #}
-  {{ content.section("education", collections) }}
-  {# {{ content.section('research') }}
-  {{ content.section('teaching') }}
+  {# well this is terrible. how do i avoid the double-naming? how to include skills list? #}
+  {# maybe split sections.first and sections.second, for where they break around skills list #}
+  {% for section in sections.sections %}
+    {{ content.section(section, collections) }}
+  {% endfor %}
   {% include "./skills.njk" %}
-  {{ content.section('talks') }}
+  {# {{ content.section('talks') }}
   {{ content.section('grants') }}
   {{ content.section('outreach') }} #}
 </main>

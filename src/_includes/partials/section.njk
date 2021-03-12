@@ -1,8 +1,8 @@
-{% macro section(name, collections) %}
+{% macro section(section, collections) %}
 <section>
-  {% set collection = collections[name] %}
-  {% set title = "Education" %}
-  {% set type = "education" %}
+  {% set collection = collections[section.folder] %}
+  {% set title = section.title %}
+  {% set type = section.type %}
     {# need to have collection name meta data or something for heading #}
     <h2 class="{{ "p-category" if type === "experience" }}">{{ title }}</h2>
     <ol>

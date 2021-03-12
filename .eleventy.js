@@ -36,16 +36,21 @@ module.exports = (config) => {
   // Use shortcode to process images with above plugin
   config.addNunjucksAsyncShortcode("image", imageShortcode);
 
-  // Collections to grab in templates
+  // Collections to grab in templates (TODO: refactor to dynamically add entry collections)
   config.addCollection("education", (collection) => {
-    // worthwhile to add a helper to fill in org details on entries instead of creating another org collection for reference in templates?
     return collection.getFilteredByGlob("./src/entries/education/*.md");
+  });
+  config.addCollection("research", (collection) => {
+    return collection.getFilteredByGlob("./src/entries/research/*.md");
+  });
+  config.addCollection("teaching", (collection) => {
+    return collection.getFilteredByGlob("./src/entries/teaching/*.md");
   });
   config.addCollection("organizations", (collection) => {
     return collection.getFilteredByGlob("./src/organizations/*.md");
   });
 
-  // helper filter
+  // helper filter (TODO: add date filter, refactor to dynamically add all filters)
   config.addFilter("findById", (array, id) => array.find((i) => i.id === id));
 
   return {
