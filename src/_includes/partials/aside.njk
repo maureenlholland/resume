@@ -1,9 +1,7 @@
 <aside>
-  <img
-    src="{{ general.image | url }}"
-    alt="{{ general.name }}"
-    class="u-photo"
-  />
+  {% set src = ["./src/", general.image] | join %}
+  {% set alt = general.name %}
+  {% image src, alt, "(min-width: 300px) 600px, 100vw" %}
   <section class="p-contact">
     <h2>Contact</h2>
     {% include "./contactAddress.njk" %}
