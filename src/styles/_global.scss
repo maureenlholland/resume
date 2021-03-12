@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "HobbitonBrushhand";
+  src: url("/theme-fonts/HobbitonBrushhand.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Distant Galaxy";
+  src: url("/theme-fonts/SFDistantGalaxy.ttf") format("truetype");
+}
+
 body {
   background-color: var(--color-bg);
   font-family: var(--font-main);

@@ -1,7 +1,7 @@
 [
   {
     "id": "default",
-    "name": "Professional",
+    "name": "Office (default)",
     "colors": {
       "text": "#000000",
       "text-offset": "#778899",
@@ -13,8 +13,8 @@
     }
   },
   {
-    "id": "lotr",
-    "name": "Lord of the Rings",
+    "id": "shire",
+    "name": "Shire",
     "colors": {
       "text": "#3c1f0f",
       "text-offset": "#778899",
@@ -22,12 +22,12 @@
     },
     "fonts": {
       "main": "Ubuntu, sans-serif",
-      "accent": "Serif"
+      "accent": "HobbitonBrushhand"
     }
   },
   {
-    "id": "starwars",
-    "name": "Star Wars",
+    "id": "galaxy",
+    "name": "Galaxy",
     "colors": {
       "text": "#fdd254",
       "text-offset": "#778899",
@@ -35,7 +35,7 @@
     },
     "fonts": {
       "main": "Ubuntu, sans-serif",
-      "accent": "Serif"
+      "accent": "SF Distant Galaxy"
     }
   }
 ]

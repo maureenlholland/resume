@@ -32,6 +32,7 @@ module.exports = (config) => {
 
   // Don't create a page for images/index.html
   config.addPassthroughCopy("./src/images/");
+  config.addPassthroughCopy("./src/theme-fonts/");
 
   // Use shortcode to process images with above plugin
   config.addNunjucksAsyncShortcode("image", imageShortcode);

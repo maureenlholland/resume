@@ -14,6 +14,8 @@ const fonts = async () => {
     "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Ubuntu:wght@400;500"
   );
 
+  console.log(result);
+
   return result;
 };
 
