@@ -1,4 +1,5 @@
 const Image = require("@11ty/eleventy-img");
+const { DateTime } = require("luxon");
 
 // 11ty plugin to generate multiple image sizes and formats: https://www.11ty.dev/docs/plugins/image/
 async function imageShortcode(src, alt, sizes) {
@@ -51,8 +52,13 @@ module.exports = (config) => {
     return collection.getFilteredByGlob("./src/organizations/*.md");
   });
 
-  // helper filter (TODO: add date filter, refactor to dynamically add all filters)
+  // helper filter (TODO: refactor to dynamically add all filters)
+  // Credit: Max Böck Theme Switcher
   config.addFilter("findById", (array, id) => array.find((i) => i.id === id));
+  // Credit: Max Böck Resume
+  config.addFilter("formatDate", (date, format) =>
+    DateTime.fromJSDate(date, { zone: "utc" }).toFormat(String(format))
+  );
 
   return {
     markdownTemplateEngine: "njk",

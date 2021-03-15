@@ -10,11 +10,14 @@
       <li class="p-{{ type }} h-event">
         <article>
           <p>
-            <span class="dt-start" datetime="{{ item.data.start_date }}">
-              {{ item.data.start_date | string | truncate(4) }}
+            <span class="dt-start" datetime="{{ item.data.start_date | formatDate('yyyy-MM-dd') }}">
+              {{ item.data.start_date | formatDate('yyyy') }}
             </span>
+            -
             {% if item.data.end_date %}
-                - <span class="dt-end" datetime="2020-01-01">{{ item.data.end_date }}</span>
+                <span class="dt-end" datetime="{{ item.data.end_date | formatDate('yyyy-MM-dd') }}">{{ item.data.end_date | formatDate('yyyy') }}</span>
+            {% else %}
+               <span>Current</span>
             {% endif %}
           </p>
           <h3 class="p-name">{{ item.data.title }}</h3>
