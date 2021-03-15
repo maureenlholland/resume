@@ -24,6 +24,7 @@
     "@11ty/eleventy-img": "^0.8.2",
     "concurrently": "^6.0.0",
     "get-google-fonts": "^1.2.2",
+    "gorko": "^0.2.3",
     "gulp": "^4.0.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-sass": "^4.1.0",

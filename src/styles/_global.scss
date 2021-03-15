@@ -8,23 +8,44 @@
   src: url("/theme-fonts/SFDistantGalaxy.ttf") format("truetype");
 }
 
+:root {
+  --flow-space: #{get-size("600")};
+}
+
 body {
-  background-color: var(--color-bg);
-  font-family: var(--font-main);
-  color: var(--color-text);
+  line-height: 1.5;
+  font-size: get-size("500");
+  background-color: get-color("bg");
+  color: get-color("text");
+  @include apply-utility("font", "main");
+  // High contrast selection
+  ::selection {
+    color: get-color("bg");
+    // TODO: Browser test selection colors, not using rgba might be an issue
+    background: get-color("text");
+  }
 }
 
 aside {
-  background-color: var(--color-text);
+  background-color: get-color("text");
+  color: get-color("bg");
+  // High contrast selection
+  ::selection {
+    color: get-color("text");
+    background: get-color("bg");
+  }
 }
 
-aside * {
-  color: var(--color-bg);
+a {
+  color: currentColor;
+}
+
+:focus {
+  outline: 2px dashed currentColor;
+  outline-offset: 0.25rem;
 }
 
 h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-accent);
+h2 {
+  @include apply-utility("font", "accent");
 }
