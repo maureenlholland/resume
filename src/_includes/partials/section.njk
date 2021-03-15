@@ -10,7 +10,9 @@
       <li class="p-{{ type }} h-event">
         <article>
           <p>
-            <span class="dt-start" datetime="2014-01-01">{{ item.data.start_date }}</span>
+            <span class="dt-start" datetime="{{ item.data.start_date }}">
+              {{ item.data.start_date | string | truncate(4) }}
+            </span>
             {% if item.data.end_date %}
                 - <span class="dt-end" datetime="2020-01-01">{{ item.data.end_date }}</span>
             {% endif %}
