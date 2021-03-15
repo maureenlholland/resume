@@ -14,8 +14,12 @@
     <title>{{ site.title }}</title>
   </head>
   <body class="h-resume">
-    {% include "partials/aside.njk" %}
-    {% include "partials/header.njk" %}
-    {% include "partials/main.njk" %}
+    <div class="with-sidebar">
+      {% include "partials/aside.njk" %}
+      <div class="not-sidebar">
+        {% include "partials/header.njk" %}
+        {% include "partials/main.njk" %}
+      </div>
+    </div>
   </body>
 </html>
