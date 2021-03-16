@@ -5,7 +5,10 @@
 @import "reset";
 // site-specific styles
 @import "global";
-@import "utilities/sidebar";
 @import "utilities/stack";
-@import "utilities/push";
+@import "utilities/sidebar-grid";
+@import "utilities/pad-horizontal";
+@import "blocks/photo";
+@import "blocks/title";
+@import "blocks/header";
 @import "blocks/aside";

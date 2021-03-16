@@ -1,13 +1,10 @@
-<aside class="sidebar | stack push-right">
-  {% set src = ["./src/", general.image] | join %}
-  {% set alt = general.name %}
-  {% image src, alt, "(min-width: 300px) 600px, 100vw" %}
-  <section class="p-contact">
+<aside class="stack pad-horizontal">
+  <section class="p-contact stack">
     <h2>Contact</h2>
     {% include "./contactAddress.njk" %}
     {% include "./contactLinks.njk" %}
   </section>
-  <section>
+  <section class="stack">
     <h2>Languages</h2>
     <ul>
     {% for language in general.languages %}

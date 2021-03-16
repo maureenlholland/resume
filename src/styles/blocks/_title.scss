@@ -1,0 +1,19 @@
+$width: 248px;
+
+// clip-path color switching credit to Mandy Michael: https://codepen.io/mandymichael/pen/LWPWvx
+h1.p-name {
+  @include media-query("lg") {
+    position: relative;
+    font-size: get-size("major");
+    left: -$width;
+    &:before {
+      content: attr(data-title);
+      position: absolute;
+      overflow: hidden;
+      clip-path: polygon(0 0, $width 0, $width 100%, 0% 100%);
+      width: 100%;
+      color: var(--color-bg);
+      text-shadow: 0px 2px 5px var(--color-text);
+    }
+  }
+}

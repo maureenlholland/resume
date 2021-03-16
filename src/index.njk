@@ -13,13 +13,9 @@
     <link rel="stylesheet" media="print" href="/css/main.css?{{ assetHash }}" onload="this.media='all'" />
     <title>{{ site.title }}</title>
   </head>
-  <body class="h-resume">
-    <div class="with-sidebar">
+  <body class="h-resume sidebar-grid">
       {% include "partials/aside.njk" %}
-      <div class="not-sidebar">
-        {% include "partials/header.njk" %}
-        {% include "partials/main.njk" %}
-      </div>
-    </div>
+      {% include "partials/header.njk" %}
+      {% include "partials/main.njk" %}
   </body>
 </html>

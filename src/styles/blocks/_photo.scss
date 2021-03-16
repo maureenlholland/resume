@@ -1,0 +1,11 @@
+.u-photo {
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  @include media-query("lg") {
+    width: var(--photo-max);
+    position: absolute;
+    left: calc((var(--photo-max) + 1.5rem) * -1);
+    top: get-size("major");
+  }
+}
