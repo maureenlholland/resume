@@ -17,7 +17,7 @@ async function imageShortcode(src, alt, sizes) {
     sizes,
     loading: "lazy",
     decoding: "async",
-    class: "u-photo",
+    class: "u-photo | header-overlap__photo",
   };
 
   return Image.generateHTML(metadata, imageAttributes);

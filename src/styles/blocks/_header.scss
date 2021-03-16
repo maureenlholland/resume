@@ -1,7 +1,0 @@
-header.pad-horizontal {
-  @include media-query("lg") {
-    position: relative;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}

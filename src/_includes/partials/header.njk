@@ -1,7 +1,7 @@
-<header class="pad-horizontal">
+<header class="header-overlap | pad-horizontal">
   {% set src = ["./src/", general.image] | join %}
   {% set alt = general.name %}
   {% image src, alt, "(min-width: 300px) 600px, 100vw" %}
-  <h1 class="p-name" data-title="{{ general.name }}">{{ general.name }}</h1>
-  <h2 class="p-job-title">{{ general.job }}</h2>
+  <h1 class="p-name | header-overlap__title" data-title="{{ general.name }}">{{ general.name }}</h1>
+  <h2 class="p-job-title | header-overlap__subtitle">{{ general.job }}</h2>
 </header>

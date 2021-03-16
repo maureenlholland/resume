@@ -1,6 +1,0 @@
-aside {
-  @include media-query("lg") {
-    --reserve-space: #{get-size("major")};
-    padding-top: calc(300px + var(--reserve-space)); // need dynamic number
-  }
-}
