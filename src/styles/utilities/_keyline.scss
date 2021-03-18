@@ -1,0 +1,8 @@
+.keyline {
+  &::after {
+    content: "";
+    display: block;
+    width: 2ch;
+    border-bottom: 4px double var(--color-text);
+  }
+}

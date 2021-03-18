@@ -4,7 +4,7 @@
   {% set title = section.title %}
   {% set type = section.type %}
     {# need to have collection name meta data or something for heading #}
-    <h2 class="{{ "p-category" if type === "experience" }}">{{ title }}</h2>
+    <h2 class="{{ "p-category" if type === "experience" }} | keyline">{{ title }}</h2>
     <ol class="reset-list">
       {% for item in collection %}
       <li class="p-{{ type }} h-event">
