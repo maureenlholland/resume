@@ -1,0 +1,37 @@
+// .entry {
+//   @include media-query("md") {
+//     display: grid;
+//     grid-template-columns: [col-dates-start] 10ch [col-content-start] 1fr;
+//     grid-template-rows: auto;
+//   }
+// }
+
+// @include media-query("md") {
+//   .entry__start,
+//   .entry__end {
+//     grid-column: col-dates-start / col-content-start;
+//     justify-self: end;
+//   }
+//   .entry__title,
+//   .entry__org,
+//   .entry__notes {
+//     grid-column: col-content-start / -1;
+//   }
+// }
+
+.entry {
+  // display: grid;
+  // grid-template-columns: [col-dates-start] minmax(10ch, 15ch) [col-content-start] 1fr;
+  display: flex;
+  > *:first-of-type {
+    flex-basis: 15ch;
+    flex-grow: 0;
+    padding-right: 5px;
+    border-right: 4px double var(--color-text);
+    border-right: 4px dotted var(--color-text);
+    // border-right: 1px solid var(--color-text);
+  }
+  > *:last-of-type {
+    padding-left: var(--space);
+  }
+}
