@@ -39,6 +39,6 @@ $padHorizontal: get-size("800");
     width: $photoSize;
     position: absolute;
     left: calc((#{$photoSize} + #{$padHorizontal}) * -1);
-    top: get-size("major");
+    top: $titleSize;
   }
 }

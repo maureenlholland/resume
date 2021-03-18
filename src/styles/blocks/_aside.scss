@@ -6,6 +6,7 @@ aside {
     color: get-color("text");
     background: get-color("bg");
   }
+  // when sidebar grid layout, stick content to right
   @include media-query("lg") {
     text-align: right;
   }

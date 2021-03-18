@@ -4,7 +4,6 @@
     "name": "Office (default)",
     "colors": {
       "text": "#000000",
-      "text-offset": "#778899",
       "background": "#ffffff"
     },
     "fonts": {
@@ -17,7 +16,6 @@
     "name": "Shire",
     "colors": {
       "text": "#50381f",
-      "text-offset": "#778899",
       "background": "#d1be9e"
     },
     "fonts": {
@@ -30,7 +28,6 @@
     "name": "Galaxy",
     "colors": {
       "text": "#fdd254",
-      "text-offset": "#778899",
       "background": "#000000"
     },
     "fonts": {
