@@ -9,7 +9,6 @@
 }
 
 :root {
-  --flow-space: #{get-size("600")};
   --photo-max: 250px;
 }
 
@@ -40,4 +39,12 @@ h1,
 h2,
 h3 {
   @include apply-utility("font", "accent");
+}
+
+h1 {
+  line-height: 1;
+  font-size: get-size("700");
+  @include media-query("md") {
+    font-size: get-size("major");
+  }
 }

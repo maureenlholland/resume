@@ -1,5 +1,8 @@
-.u-photo {
+.photo {
   height: auto;
   border-radius: 50%;
   position: relative;
+  @include media-query("md") {
+    width: var(--photo-max);
+  }
 }
