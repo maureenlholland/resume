@@ -6,9 +6,11 @@
 // site-specific styles
 @import "global";
 @import "utilities/stack";
-@import "utilities/sidebar-grid";
+@import "utilities/reset-list";
 @import "utilities/pad-horizontal";
 @import "utilities/pad-vertical";
 @import "blocks/aside";
 @import "blocks/photo";
+@import "blocks/skills";
+@import "blocks/sidebar-grid";
 @import "blocks/header-overlap";

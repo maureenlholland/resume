@@ -1,0 +1,11 @@
+@include media-query("md") {
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skills__title {
+    width: 100%;
+    margin-bottom: var(--space);
+  }
+}
