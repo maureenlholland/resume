@@ -1,0 +1,12 @@
+aside {
+  background-color: get-color("text");
+  color: get-color("bg");
+  // High contrast selection
+  ::selection {
+    color: get-color("text");
+    background: get-color("bg");
+  }
+  @include media-query("lg") {
+    text-align: right;
+  }
+}

@@ -5,7 +5,7 @@
     "sidebar"
     "main";
   @include media-query("lg") {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 40% 60%;
     grid-template-areas:
       "sidebar header"
       "sidebar main";

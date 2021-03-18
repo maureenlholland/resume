@@ -11,10 +11,8 @@ const fonts = async () => {
 
   // Grabs fonts and CSS from google and puts in the dist folder
   const result = await instance.download(
-    "https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Ubuntu:wght@400;500"
+    "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700"
   );
-
-  console.log(result);
 
   return result;
 };

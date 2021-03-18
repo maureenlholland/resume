@@ -1,4 +1,4 @@
-$overlap: 248px;
+$overlap: 250px;
 $photoSize: var(--photo-max);
 $titleSize: get-size("major");
 $padHorizontal: get-size("800");
@@ -27,7 +27,7 @@ $padHorizontal: get-size("800");
       clip-path: polygon(0 0, $overlap 0, $overlap 100%, 0% 100%);
       width: 100%;
       color: var(--color-bg);
-      text-shadow: 0px 2px 5px var(--color-text);
+      text-shadow: 0px 3px 3px var(--color-text);
     }
   }
 

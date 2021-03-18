@@ -8,21 +8,21 @@
       "background": "#ffffff"
     },
     "fonts": {
-      "main": "Ubuntu, sans-serif",
-      "accent": "Fira Sans, sans-serif"
+      "main": "Poppins, sans-serif",
+      "accent": "Poppins, sans-serif"
     }
   },
   {
     "id": "shire",
     "name": "Shire",
     "colors": {
-      "text": "#3c1f0f",
+      "text": "#50381f",
       "text-offset": "#778899",
       "background": "#d1be9e"
     },
     "fonts": {
-      "main": "Ubuntu, sans-serif",
-      "accent": "HobbitonBrushhand"
+      "main": "Poppins, sans-serif",
+      "accent": "Middleearth, cursive"
     }
   },
   {
@@ -34,8 +34,8 @@
       "background": "#000000"
     },
     "fonts": {
-      "main": "Ubuntu, sans-serif",
-      "accent": "SF Distant Galaxy"
+      "main": "Poppins, sans-serif",
+      "accent": "SF Distant Galaxy, monospace"
     }
   }
 ]

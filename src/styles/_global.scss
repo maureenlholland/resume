@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "HobbitonBrushhand";
-  src: url("/theme-fonts/HobbitonBrushhand.ttf") format("truetype");
+  font-family: "Middleearth";
+  src: url("/theme-fonts/Middleearth.ttf") format("truetype");
 }
 
 @font-face {
@@ -10,7 +10,7 @@
 
 :root {
   --flow-space: #{get-size("600")};
-  --photo-max: 300px;
+  --photo-max: 250px;
 }
 
 body {
@@ -25,19 +25,6 @@ body {
     // TODO: Browser test selection colors, not using rgba might be an issue
     background: get-color("text");
   }
-  @include media-query("md") {
-    font-size: get-size("500");
-  }
-}
-
-aside {
-  background-color: get-color("text");
-  color: get-color("bg");
-  // High contrast selection
-  ::selection {
-    color: get-color("text");
-    background: get-color("bg");
-  }
 }
 
 a {
@@ -50,6 +37,7 @@ a {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   @include apply-utility("font", "accent");
 }
