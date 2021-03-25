@@ -1,4 +1,4 @@
-$overlap: 250px;
+$overlap: 313px;
 $photoSize: var(--photo-max);
 $titleSize: get-size("major");
 $padding: get-size("800");
@@ -39,6 +39,6 @@ $padding: get-size("800");
     width: $photoSize;
     position: absolute;
     left: calc((#{$photoSize} + #{$padding}) * -1);
-    top: calc(#{$titleSize} + #{$padding});
+    top: calc(#{$titleSize} + #{$padding} + var(--space));
   }
 }
