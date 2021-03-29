@@ -12,10 +12,81 @@
     <link rel="stylesheet" media="print" href="/css/themes.css?{{ assetHash }}" onload="this.media='all'" />
     <link rel="stylesheet" media="print" href="/css/main.css?{{ assetHash }}" onload="this.media='all'" />
     <title>{{ site.title }}</title>
+     <script>(localStorage.getItem('theme')) && document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))</script>
   </head>
   <body class="h-resume | sidebar-grid">
+    <button class="js-themepicker-themeselect" data-theme="default">Office</button>
+    <button class="js-themepicker-themeselect" data-theme="shire">Shire</button>
+    <button class="js-themepicker-themeselect" data-theme="galaxy">Galaxy</button>
       {% include "partials/aside.njk" %}
       {% include "partials/header.njk" %}
       {% include "partials/main.njk" %}
   </body>
+  <script>
+
+const THEME_STORAGE_KEY = 'theme'
+
+class ThemePicker {
+    constructor() {
+        this.activeTheme = 'default'
+        this.hasLocalStorage = typeof Storage !== 'undefined'
+        this.themeSelectBtns = Array.from(
+            document.querySelectorAll('.js-themepicker-themeselect')
+        )
+
+        this.init()
+    }
+
+    init() {
+        const systemPreference = this.getSystemPreference()
+        const storedPreference = this.getStoredPreference()
+
+        if (storedPreference) {
+            this.activeTheme = storedPreference
+        } else if (systemPreference) {
+            this.activeTheme = systemPreference
+        }
+
+        this.bindEvents()
+        this.setTheme(this.activeTheme)
+    }
+
+    bindEvents() {
+        this.themeSelectBtns.forEach((btn) => {
+            const id = btn.dataset.theme
+            if (id) {
+                btn.addEventListener('click', () => this.setTheme(id))
+            }
+        })
+    }
+
+    getSystemPreference() {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            return 'dark'
+        }
+        return false
+    }
+
+    getStoredPreference() {
+        if (this.hasLocalStorage) {
+            return localStorage.getItem(THEME_STORAGE_KEY)
+        }
+        return false
+    }
+    
+
+    setTheme(id) {
+        this.activeTheme = id
+        document.documentElement.setAttribute('data-theme', id)
+
+        if (this.hasLocalStorage) {
+            localStorage.setItem(THEME_STORAGE_KEY, id)
+        }
+    }
+}
+
+if (window.CSS && CSS.supports('color', 'var(--fake-var)')) {
+    new ThemePicker()
+}
+  </script>
 </html>

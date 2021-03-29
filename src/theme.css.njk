@@ -1,16 +1,36 @@
 ---
 permalink: '/css/themes.css'
 ---
-
+{# full credit for theme-switcher to Max Böck: https://github.com/maxboeck/mxb/blob/master/src/themes.njk #}
 {% macro customprops(theme) %}
     --color-bg: {{ theme.colors.background }};
     --color-text: {{ theme.colors.text }};
     --font-main: {{ theme.fonts.main }};
     --font-accent: {{ theme.fonts.accent }};
+    --overlap: {{ theme.position.overlap }}
 {% endmacro %}
 
 {%- set default = themes|findById('default') -%}
 
 :root {
     {{ customprops(default) }}
+}
+
+{% for theme in themes %}
+[data-theme='{{ theme.id }}'] {
+    {{ customprops(theme) }}
+}
+{% endfor %}
+
+{# Extra styles for Shire #}
+[data-theme='shire'] body {
+    background-image: url("/images/paper-bg.jpg");
+    background-blend-mode: hard-light;
+}
+
+{# Extra styles for Galaxy #}
+[data-theme='galaxy'] body {
+    background-image: url("/images/stars-bg.jpg");
+    {# TODO: no blend, animation? #}
+    background-blend-mode: luminosity;
 }
