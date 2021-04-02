@@ -10,9 +10,9 @@
       <li class="p-{{ type }} h-event">
         <article class="entry">
           <div>
-            <span class="dt-start | entry__start" datetime="{{ item.data.start_date | formatDate('yyyy-MM-dd') }}">{{ item.data.start_date | formatDate('yyyy') }}</span>
+            <time class="dt-start | entry__start" datetime="{{ item.data.start_date | formatDate('yyyy-MM-dd') }}">{{ item.data.start_date | formatDate('yyyy') }}</time>
             {% if item.data.end_date %}
-                <span class="dt-end | entry__end" datetime="{{ item.data.end_date | formatDate('yyyy-MM-dd') }}">- {{ item.data.end_date | formatDate('yyyy') }}</span>
+                <time class="dt-end | entry__end" datetime="{{ item.data.end_date | formatDate('yyyy-MM-dd') }}">- {{ item.data.end_date | formatDate('yyyy') }}</time>
             {% else %}
                <span class="entry__end">- Current</span>
             {% endif %}
