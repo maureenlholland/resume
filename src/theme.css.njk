@@ -29,9 +29,20 @@ permalink: '/css/themes.css'
 }
 
 {# Extra styles for Galaxy #}
+@keyframes twinkle {
+    from  { background-position: 0,0; }
+    to { background-position: -5000px 5000px; }
+}
+{# should lazy load or something to avoid defining keyframe unnecessarily #}
+
+{# twinkle effect thanks to this tutorial: https://www.script-tutorials.com/night-sky-with-twinkling-stars/ #}
+{# GPU working too hard with background-position animation. use canvas? #}
 [data-theme='galaxy'] body {
-    {# background-image: url("/images/stars-bg.jpg"); #}
-    {# TODO: no blend, animation? #}
-    {# use this technique: https://www.script-tutorials.com/night-sky-with-twinkling-stars/ #}
-    {# background-blend-mode: luminosity; #}
+    background: #000 url("/images/stars.png") repeat top center;
+}
+[data-theme='galaxy'] header,
+[data-theme='galaxy'] main {
+    background:transparent url("/images/twinkling.png") repeat top center;
+    animation:twinkle 400s linear infinite;
+
 }
