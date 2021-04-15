@@ -1,16 +1,47 @@
 ---
 permalink: '/css/themes.css'
 ---
-
+{# full credit for theme-switcher to Max Böck: https://github.com/maxboeck/mxb/blob/master/src/themes.njk #}
 {% macro customprops(theme) %}
     --color-bg: {{ theme.colors.background }};
     --color-text: {{ theme.colors.text }};
     --font-main: {{ theme.fonts.main }};
     --font-accent: {{ theme.fonts.accent }};
+    --overlap: {{ theme.position.overlap }}
 {% endmacro %}
 
 {%- set default = themes|findById('default') -%}
 
 :root {
     {{ customprops(default) }}
+}
+
+{% for theme in themes %}
+[data-theme='{{ theme.id }}'] {
+    {{ customprops(theme) }}
+}
+{% endfor %}
+
+{# Extra styles for Shire #}
+[data-theme='shire'] body {
+    background-image: url("/images/paper-bg.jpg");
+    background-blend-mode: hard-light;
+}
+
+{# Extra styles for Galaxy #}
+@keyframes twinkle {
+    from  { background-position: 0,0; }
+    to { background-position: -5000px 5000px; }
+}
+{# should lazy load or something to avoid defining keyframe unnecessarily #}
+
+{# twinkle effect thanks to this tutorial: https://www.script-tutorials.com/night-sky-with-twinkling-stars/ #}
+{# GPU working too hard with background-position animation. use canvas? #}
+[data-theme='galaxy'] body {
+    background: #000 url("/images/stars.png") repeat top center;
+}
+[data-theme='galaxy'] header,
+[data-theme='galaxy'] main {
+    background:transparent url("/images/twinkling.png") repeat top center;
+    animation:twinkle 400s linear infinite;
 }
