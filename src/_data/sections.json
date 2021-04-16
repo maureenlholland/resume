@@ -10,6 +10,19 @@
           "organization": "src/organizations/concordia-university.md"
         }
       ]
+    },
+    {
+      "template": "skillList",
+      "skill-lists": [
+        {
+          "skill": [
+            "C++",
+            "Python"
+          ],
+          "title": "Programming"
+        }
+      ],
+      "title": "Skills"
     }
   ]
 }
