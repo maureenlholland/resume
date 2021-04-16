@@ -6,19 +6,19 @@ fields:
   name: title
   label: Section Title
 - type: field_group_list
-  name: list
-  label: Skills
+  name: skill-lists
+  label: Skill Lists
   fields:
   - name: title
     type: text
     config:
       required: true
-    label: Skill List Title
-  - name: skills
+    label: Title
+  - name: skill
     type: list
     default: []
     config:
       required: true
       use-select: false
       min: 1
-    label: Skill Title
+    label: Skill
