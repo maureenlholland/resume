@@ -3,13 +3,6 @@
     {
       "template": "entry",
       "title": "Education",
-      "entry": [
-        {
-          "title": "Student",
-          "start_date": "2021-03-28",
-          "organization": "src/organizations/concordia-university.md"
-        }
-      ],
       "entries": [
         {
           "title": "Québec Inter-University Transfer Student",
@@ -41,10 +34,7 @@
       "template": "skillList",
       "skill-lists": [
         {
-          "skill": [
-            "C++",
-            "Python"
-          ],
+          "skill": ["C++", "Python"],
           "title": "Programming"
         }
       ],
