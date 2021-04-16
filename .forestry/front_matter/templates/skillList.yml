@@ -28,5 +28,3 @@ fields:
     use-select: false
     min: 1
   label: Skills
-pages:
-- src/entries/test.md
