@@ -2,23 +2,20 @@
 label: Skill List
 hide_body: true
 fields:
-- type: text
-  name: title
-  label: Section Title
-- type: field_group_list
-  name: skill-lists
-  label: Skill Lists
-  fields:
-  - name: title
-    type: text
-    config:
-      required: true
-    label: Title
-  - name: skill
-    type: list
-    default: []
-    config:
-      required: true
-      use-select: false
-      min: 1
-    label: Skill
+  - type: field_group_list
+    name: skill-lists
+    label: Skill Lists
+    fields:
+      - name: title
+        type: text
+        config:
+          required: true
+        label: Title
+      - name: skill
+        type: list
+        default: []
+        config:
+          required: true
+          use-select: false
+          min: 1
+        label: Skill

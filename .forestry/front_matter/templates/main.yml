@@ -11,7 +11,7 @@ fields:
         label: Title
       - type: boolean
         name: type
-        description: If true, will display list fields.
+        description: If true, will display skill list fields.
         label: Is list
         default: false
       - type: include
@@ -22,6 +22,10 @@ fields:
         showOnly:
           field: type
           value: false
-      - type: text
+      - type: include
+        template: skillList
         name: skillList
         label: Skills
+        showOnly:
+          field: type
+          value: true
