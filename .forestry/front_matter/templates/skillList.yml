@@ -1,6 +1,5 @@
 ---
 label: Skill List
-hide_body: true
 fields:
   - type: field_group_list
     name: skill-lists
