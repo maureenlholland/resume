@@ -9,7 +9,7 @@ fields:
       - type: text
         name: title
         label: Title
-      - type: toggle
+      - type: boolean
         name: type
         description: If true, will display list fields.
         label: Is list
