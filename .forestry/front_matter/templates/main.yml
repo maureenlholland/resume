@@ -5,6 +5,4 @@ fields:
 - type: blocks
   name: sections
   label: Sections
-  template_types:
-  - entry
-  - skillList
+  template_types: []
