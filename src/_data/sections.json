@@ -27,6 +27,17 @@
       "type": false
     },
     {
+      "title": "Research Experience",
+      "type": false,
+      "entries": [
+        {
+          "title": "Postdoctoral Research Assistant",
+          "start_date": "2020-08-30",
+          "organization": "src/organizations/ippp-durham-university.md"
+        }
+      ]
+    },
+    {
       "template": "skillList",
       "skill-lists": [
         {
