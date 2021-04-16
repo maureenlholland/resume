@@ -6,4 +6,4 @@ fields:
   name: sections
   label: Sections
   template_types:
-  - organization
+  - skillList
