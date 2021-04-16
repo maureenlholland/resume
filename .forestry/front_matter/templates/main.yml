@@ -8,7 +8,7 @@ fields:
     fields:
       - type: text
         name: title
-        label: Title
+        label: Section Title
       - type: boolean
         name: type
         description: If true, will display skill list fields.
