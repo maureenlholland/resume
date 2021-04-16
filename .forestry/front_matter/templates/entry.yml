@@ -9,10 +9,10 @@ fields:
     required: true
     options: []
     source:
-      type: document
+      type: documents
       section: order
-      file: 
-      path: src/_data/tags.json
+      file: src/_data/tags.json
+      path: order
   label: Section
 - name: title
   type: text
