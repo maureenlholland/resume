@@ -6,15 +6,15 @@ fields:
   - name: tag
     type: select
     default: []
-  config:
-    required: true
-    options: []
-    source:
-      type: documents
-      section: order
-      file: src/_data/tags.json
-      path: order
-    hidden: true
+    config:
+      required: true
+      options: []
+      source:
+        type: documents
+        section: order
+        file: src/_data/tags.json
+        path: order
+    label: Section
   - name: title
     type: text
     config:
