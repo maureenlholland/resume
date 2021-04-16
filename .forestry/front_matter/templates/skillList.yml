@@ -5,7 +5,7 @@ hide_body: true
 fields:
   - name: tag
     type: select
-    default: ["Skills"]
+    default: []
   config:
     required: true
     options: []
