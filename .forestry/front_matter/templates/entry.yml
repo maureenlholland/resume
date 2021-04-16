@@ -40,6 +40,7 @@ fields:
       path: 
   label: Organization
 pages:
+- src/entries/Teaching Experience/teaching-assistant.md
 - src/entries/education/phd-in-theoretical-high-energy-physics.md
 - src/entries/education/quebec-inter-university-transfer-student.md
 - src/entries/research/postdoctoral-research-associate.md
