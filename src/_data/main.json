@@ -1,7 +1,6 @@
 {
   "sections": [
     {
-      "template": "entry",
       "title": "Education",
       "entries": [
         {
@@ -17,7 +16,7 @@
           "organization": "src/organizations/concordia-university.md"
         }
       ],
-      "type": false
+      "isList": false
     },
     {
       "title": "Research Experience",
@@ -31,28 +30,18 @@
       ]
     },
     {
-      "template": "skillList",
-      "skill-lists": [
+      "skills": [
         {
           "title": "OS",
-          "skill": [
-            "MacOS",
-            "Linux (Debian)"
-          ]
+          "list": ["MacOS", "Linux (Debian)"]
         },
         {
-          "skill": [
-            "C++",
-            "Python"
-          ],
+          "list": ["C++", "Python"],
           "title": "Programming"
         }
       ],
       "title": "Skills",
-      "entries": [
-
-      ],
-      "type": true
+      "isList": true
     }
   ]
 }

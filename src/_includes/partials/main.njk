@@ -1,14 +1,12 @@
-{% import "./section.njk" as content with context %}
-
 <main class="stack pad-horizontal pad-vertical">
-  {# will replace with sections loop for user-determined order #}
-  {# well this is terrible. how do i avoid the double-naming? how to include skills list? #}
-  {# maybe split sections.first and sections.second, for where they break around skills list #}
-  {% for section in sections.sections %}
-    {{ content.section(section, collections) }}
+  {% for section in main.sections %}
+    {% if section.isList %}
+      {% set listSection = section %}
+      {% include './sectionSkills.njk'%}
+    {% else %}
+      {% set collection = section.entries %}
+      {% set title = section.title %}
+      {% include './sectionEvents.njk'%}
+    {% endif %}
   {% endfor %}
-  {% include "./skills.njk" %}
-  {# {{ content.section('talks') }}
-  {{ content.section('grants') }}
-  {{ content.section('outreach') }} #}
 </main>

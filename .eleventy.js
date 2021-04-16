@@ -38,16 +38,7 @@ module.exports = (config) => {
   // Use shortcode to process images with above plugin
   config.addNunjucksAsyncShortcode("image", imageShortcode);
 
-  // Collections to grab in templates (TODO: refactor to dynamically add entry collections)
-  config.addCollection("education", (collection) => {
-    return collection.getFilteredByGlob("./src/entries/education/*.md");
-  });
-  config.addCollection("research", (collection) => {
-    return collection.getFilteredByGlob("./src/entries/research/*.md");
-  });
-  config.addCollection("teaching", (collection) => {
-    return collection.getFilteredByGlob("./src/entries/teaching/*.md");
-  });
+  // Collections to grab in templates
   config.addCollection("organizations", (collection) => {
     return collection.getFilteredByGlob("./src/organizations/*.md");
   });
@@ -57,7 +48,7 @@ module.exports = (config) => {
   config.addFilter("findById", (array, id) => array.find((i) => i.id === id));
   // Credit: Max Böck Resume
   config.addFilter("formatDate", (date, format) =>
-    DateTime.fromJSDate(date, { zone: "utc" }).toFormat(String(format))
+    DateTime.fromISO(date, { zone: "utc" }).toFormat(String(format))
   );
 
   return {
