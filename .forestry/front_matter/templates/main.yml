@@ -2,9 +2,9 @@
 label: Main
 hide_body: true
 fields:
-  - type: blocks
-    name: sections
-    label: Sections
-    template_types:
-      - entry
-      - skillList
+- type: blocks
+  name: sections
+  label: Sections
+  template_types:
+  - entry
+  - skillList
