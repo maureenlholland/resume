@@ -1,29 +1,31 @@
 ---
----
-label: Skills List
+label: Skill List
 hide_body: true
 fields:
-  - name: tag
-    type: select
-    default: []
-    config:
-      required: true
-      options: []
-      source:
-        type: documents
-        section: order
-        file: src/_data/tags.json
-        path: order
-    label: Section
-  - name: title
-    type: text
-    config:
-      required: true
-    label: Title
-  - name: list
-    type: list
-    config:
-      required: true
-      use-select: false
-      min: 1
-    label: Skills
+- name: tag
+  type: select
+  default: []
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: order
+      file: src/_data/tags.json
+      path: order
+  label: Section
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: skills
+  type: list
+  default: []
+  config:
+    required: true
+    use-select: false
+    min: 1
+  label: Skills
+pages:
+- src/entries/test.md
