@@ -8,12 +8,7 @@ fields:
     default: ["Skills"]
     config:
       required: true
-      options: []
-      source:
-        type: documents
-        section: order
-        file: src/_data/tags.json
-        path: order
+      options: ["Skills"]
     hidden: true
   - name: title
     type: text
