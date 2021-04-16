@@ -26,7 +26,6 @@ sections:
   create: all
   match: "**/*"
   templates:
-  - config
   - entry
 - type: document
   path: src/_data/skills.json
