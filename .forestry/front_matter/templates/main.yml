@@ -18,6 +18,10 @@ fields:
     name: entry
     label: Entry
     template: entry
+    hidden: false
+    showOnly:
+      field: type
+      value: false
   - type: text
     name: skillList
     label: Skills
