@@ -41,6 +41,13 @@
       "template": "skillList",
       "skill-lists": [
         {
+          "title": "OS",
+          "skill": [
+            "MacOS",
+            "Linux"
+          ]
+        },
+        {
           "skill": [
             "C++",
             "Python"
@@ -48,7 +55,11 @@
           "title": "Programming"
         }
       ],
-      "title": "Skills"
+      "title": "Skills",
+      "entries": [
+
+      ],
+      "type": true
     }
   ]
 }
