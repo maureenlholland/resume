@@ -1,8 +1,8 @@
 {
   "order": [
     "Education",
-    "Skills",
     "Research Experience",
-    "Teaching Experience"
+    "Teaching Experience",
+    "Skills"
   ]
 }
