@@ -1,0 +1,15 @@
+{
+  "sections": [
+    {
+      "template": "entry",
+      "title": "Education",
+      "entry": [
+        {
+          "title": "Student",
+          "start_date": "2021-03-28",
+          "organization": "src/organizations/concordia-university.md"
+        }
+      ]
+    }
+  ]
+}
