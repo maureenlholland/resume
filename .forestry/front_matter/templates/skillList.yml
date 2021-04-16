@@ -1,21 +1,29 @@
 ---
-label: Skills
-type: field_group_list
-name: skills
-description: Multiple lists that will display under the Skills section
-hidden: false
+---
+label: Skills List
+hide_body: true
 fields:
-- type: text
-  name: name
-  label: Skill Category
-  config:
-    required: true
-- type: list
-  name: skillList
-  label: Skill List
+  - name: tag
+    type: select
+    default: ["Skills"]
     config:
-    required: true
-    use-select: false
-    min: 1
-config:
-  labelField: name
+      required: true
+      options: []
+      source:
+        type: documents
+        section: order
+        file: src/_data/tags.json
+        path: order
+    hidden: true
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: list
+    type: list
+    config:
+      required: true
+      use-select: false
+      min: 1
+    label: Skills
