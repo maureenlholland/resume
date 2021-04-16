@@ -7,3 +7,5 @@ fields:
   label: Name
   config:
     required: true
+pages:
+- src/entries/teaching/config.md
