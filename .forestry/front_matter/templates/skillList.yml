@@ -6,9 +6,14 @@ fields:
   - name: tag
     type: select
     default: ["Skills"]
-    config:
-      required: true
-      options: ["Skills"]
+  config:
+    required: true
+    options: []
+    source:
+      type: documents
+      section: order
+      file: src/_data/tags.json
+      path: order
     hidden: true
   - name: title
     type: text
