@@ -15,16 +15,9 @@ sections:
     new_doc_ext: md
     templates:
       - organization
-  - type: heading
-    label: Sections
   - type: document
-    path: src/_data/tags.json
-    label: Order
-  - type: directory
-    path: src/entries
+    path: src/_data/sections.json
     label: Main
-    create: documents
-    match: "**/*"
     templates:
       - main
 upload_dir: src/images
