@@ -35,15 +35,23 @@
       "skill-lists": [
         {
           "title": "OS",
-          "skill": ["MacOS", "Linux"]
+          "skill": [
+            "MacOS",
+            "Linux (Debian)"
+          ]
         },
         {
-          "skill": ["C++", "Python"],
+          "skill": [
+            "C++",
+            "Python"
+          ],
           "title": "Programming"
         }
       ],
       "title": "Skills",
-      "entries": [],
+      "entries": [
+
+      ],
       "type": true
     }
   ]
