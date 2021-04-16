@@ -1,0 +1,21 @@
+---
+label: Main
+hide_body: true
+- type: field_group_list
+  name: sections
+  label: Sections
+  fields:
+  - type: text
+    name: title
+    label: Title
+  - type: toggle
+    name: type
+    description: If true, will display list fields.
+    label: Is list
+    default: false
+  - type: include
+    name: entry
+    label: Entry
+  - type: text
+    name: skillList
+    label: Skills
