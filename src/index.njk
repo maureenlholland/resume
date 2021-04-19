@@ -10,14 +10,15 @@
     {# see https://www.filamentgroup.com/lab/async-css.html for media="print" explanation #}
     <link rel="stylesheet" media="print" href="/fonts/fonts.css?{{ assetHash }}" onload="this.media='all'" />
     <link rel="stylesheet" media="print" href="/css/themes.css?{{ assetHash }}" onload="this.media='all'" />
+    <link rel="stylesheet" media="print" href="/css/print.css?{{ assetHash }}"/>
     <link rel="stylesheet" media="print" href="/css/main.css?{{ assetHash }}" onload="this.media='all'" />
     <title>{{ site.title }}</title>
      <script>(localStorage.getItem('theme')) && document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))</script>
   </head>
   <body class="h-resume | sidebar-grid">
       {% include "partials/theme-switcher.njk" %}
-      {% include "partials/aside.njk" %}
       {% include "partials/header.njk" %}
+      {% include "partials/aside.njk" %}
       {% include "partials/main.njk" %}
   </body>
   <script>
