@@ -63,9 +63,7 @@
 }
 
 // selected theme style
-[data-theme="default"] .theme-switcher__option[data-theme="default"],
-[data-theme="shire"] .theme-switcher__option[data-theme="shire"],
-[data-theme="galaxy"] .theme-switcher__option[data-theme="galaxy"] {
+.theme-switcher__option[aria-checked="true"] {
   border: var(--border-width) solid get-color("text");
   outline: var(--border-width) solid get-color("text");
   outline-offset: 0.1rem;

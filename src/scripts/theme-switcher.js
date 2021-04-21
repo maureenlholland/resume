@@ -143,6 +143,13 @@ class ThemeSwitcher {
   setTheme(id) {
     this.activeTheme = id;
     document.documentElement.setAttribute("data-theme", id);
+    this.themeOptions.forEach((option) => {
+      if (option.dataset.theme !== id) {
+        option.removeAttribute("aria-checked");
+      } else {
+        option.setAttribute("aria-checked", "true");
+      }
+    });
 
     // todo, change to overlay with z-index stacking updates
     const pans = {
