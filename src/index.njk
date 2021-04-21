@@ -1,7 +1,7 @@
 {% set assetHash = helpers.random() %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -20,119 +20,7 @@
       {% include "partials/header.njk" %}
       {% include "partials/aside.njk" %}
       {% include "partials/main.njk" %}
+      {# Main JS Bundle #}
+       <script src="{{ '/js/main.js' | url }}" defer></script>
   </body>
-  <script>
-
-const THEME_STORAGE_KEY = 'theme'
-
-class ThemeSwitcher {
-    constructor() {
-        this.activeTheme = 'default'
-        this.hasLocalStorage = typeof Storage !== 'undefined'
-        this.svg = document.getElementById('photo__themes')
-        this.toggle = document.getElementById('theme-switcher__display')
-        this.themeOptions = document.querySelectorAll('.theme-switcher__option')
-
-        this.init()
-    }
-
-    init() {
-        const systemPreference = this.getSystemPreference()
-        const storedPreference = this.getStoredPreference()
-
-        if (storedPreference) {
-            this.activeTheme = storedPreference
-        } else if (systemPreference) {
-            this.activeTheme = systemPreference
-        }
-
-        this.bindEvents()
-        this.setTheme(this.activeTheme)
-        {# set data switcher to closed on load #}
-        document.documentElement.setAttribute('data-switcher-open', false)
-    }
-
-    {# todo: when theme menu is open, blur header, aside, and main (body:not(.theme-switcher)?), use inert #}
-    {# todo: when theme menu is closed, no blur#}
-
-    bindEvents() {
-        this.toggle.addEventListener('click', () => this.toggleOptionDisplay())
-        this.themeOptions.forEach((option) => {
-            const id = option.dataset.theme;
-            if (id) {
-                option.addEventListener('click', () => this.setTheme(id))
-            }
-        })
-        // Options for the observer (which mutations to observe)
-        const config = { attributes: true, childList: true, subtree: true };
-
-        // Callback function to execute when mutations are observed
-        const callback = function(mutationsList, observer) {
-            // Use traditional 'for loops' for IE 11
-            for(const mutation of mutationsList) {
-                if (mutation.type === 'attributes') {
-                    if (mutation.target.ariaExpanded === 'true') {
-                        document.documentElement.setAttribute('data-switcher-open', true)
-                    } else {
-                        document.documentElement.setAttribute('data-switcher-open', false)
-                    }
-                }
-            }
-        };
-
-        // Create an observer instance linked to the callback function
-        let observer = new MutationObserver(callback);
-
-        // Start observing the target node for configured mutations
-        observer.observe(this.toggle, config);
-    }
-
-    getSystemPreference() {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            return 'dark'
-        }
-        return false
-    }
-
-    getStoredPreference() {
-        if (this.hasLocalStorage) {
-            return localStorage.getItem(THEME_STORAGE_KEY)
-        }
-        return false
-    }
-
-    toggleOptionDisplay() {
-        const currentState = this.toggle.getAttribute('aria-expanded') === 'false' ? false : true;
-        this.toggle.setAttribute('aria-expanded', String(!currentState));
-
-        {# if (!currentState) {
-
-        } #}
-    }
-    
-
-    setTheme(id) {
-        this.activeTheme = id
-        document.documentElement.setAttribute('data-theme', id)
-
-        {# change viewport for photo overlay (TODO: put this somewhere better) #}
-        const pans = {
-            galaxy: 840,
-            shire: 4120,
-            default: 2500
-        };
-
-        this.svg.setAttribute('viewBox', `${pans[id]} -50 450 2376`)
-
-
-        if (this.hasLocalStorage) {
-            localStorage.setItem(THEME_STORAGE_KEY, id)
-        }
-    }
-}
-
-if (window.CSS && CSS.supports('color', 'var(--fake-var)')) {
-    new ThemeSwitcher()
-}
-  </script>
 </html>
