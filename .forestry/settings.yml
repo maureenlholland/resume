@@ -1,28 +1,28 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path:
-webhook_url:
+admin_path: ''
+webhook_url: 
 sections:
-  - type: document
-    path: src/_data/general.json
-    label: General
-  - type: document
-    path: src/_data/main.json
-    label: Main
-    templates:
-      - main
-  - type: directory
-    path: src/organizations
-    label: Organizations
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - organization
+- type: document
+  path: src/_data/general.json
+  label: General
+- type: document
+  path: src/_data/main.json
+  label: Main
+  templates:
+  - main
+- type: directory
+  path: src/organizations
+  label: Organizations
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - organization
 upload_dir: src/images
 public_path: images
-front_matter_path: ""
+front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:

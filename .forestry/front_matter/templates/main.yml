@@ -2,30 +2,30 @@
 label: Main
 hide_body: true
 fields:
-  - type: field_group_list
-    name: sections
-    label: Sections
-    fields:
-      - type: text
-        name: title
-        label: Section Title
-      - type: boolean
-        name: isList
-        description: If true, will display skill list fields.
-        label: Is list
-        default: false
-      - type: include
-        name: entry
-        label: Entry
-        template: entry
-        hidden: false
-        showOnly:
-          field: type
-          value: false
-      - type: include
-        template: skills
-        name: skills
-        label: Skills
-        showOnly:
-          field: type
-          value: true
+- type: field_group_list
+  name: sections
+  label: Sections
+  fields:
+  - type: text
+    name: title
+    label: Section Title
+  - type: boolean
+    name: isList
+    description: If true, will display skill list fields.
+    label: Is list
+    default: false
+  - type: include
+    name: entry
+    label: Entry
+    template: entry
+    hidden: false
+    showOnly:
+      field: type
+      value: false
+  - type: include
+    template: skills
+    name: skills
+    label: Skills
+    showOnly:
+      field: type
+      value: true
