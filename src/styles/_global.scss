@@ -36,6 +36,10 @@ a {
   outline-offset: 0.25rem;
 }
 
+[hidden="true"] {
+  display: none !important;
+}
+
 h1,
 h2,
 h3 {

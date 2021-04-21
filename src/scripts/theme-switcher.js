@@ -6,7 +6,10 @@ class ThemeSwitcher {
     this.hasLocalStorage = typeof Storage !== "undefined";
     this.svg = document.getElementById("photo__themes");
     this.toggle = document.getElementById("theme-switcher__display");
-    this.themeMenu = document.getElementById("theme-switcher__options");
+    this.themeSwitcher = document.querySelector(".theme-switcher");
+    this.themeOptionsContainer = document.querySelector(
+      ".theme-switcher__options"
+    );
     this.themeOptions = document.querySelectorAll(".theme-switcher__option");
 
     this.init();
@@ -25,6 +28,7 @@ class ThemeSwitcher {
     this.bindEvents();
     this.setTheme(this.activeTheme);
     document.documentElement.setAttribute("data-switcher-open", false);
+    this.themeOptionsContainer.setAttribute("hidden", true);
   }
 
   bindEvents() {
@@ -44,6 +48,8 @@ class ThemeSwitcher {
       attributes: true,
       attributeFilter: ["aria-expanded"],
     });
+    // bind method for tab trap for same reason (needs same reference to remove)
+    this.tabTrapThemeMenu = this.tabTrapThemeMenu.bind(this);
   }
 
   handleThemeMenu(mutationsList) {
@@ -54,20 +60,29 @@ class ThemeSwitcher {
           /*
             When theme menu is expanded
             - blur background
+            - display options
             - tab trap inside theme menu
             - listen for ESC or outside theme menu event
             */
           document.documentElement.setAttribute("data-switcher-open", true);
+          this.themeOptionsContainer.removeAttribute("hidden");
+          this.themeSwitcher.addEventListener("keydown", this.tabTrapThemeMenu);
           document.addEventListener("keydown", this.forceCloseThemeMenu);
           document.addEventListener("click", this.forceCloseThemeMenu);
         } else {
           /*
             When theme menu is closed
             - do not blur background
+            - hide options
             - remove tab trap
             - remove ESC or outside theme menu event listeners
           */
           document.documentElement.setAttribute("data-switcher-open", false);
+          this.themeOptionsContainer.setAttribute("hidden", true);
+          this.themeSwitcher.removeEventListener(
+            "keydown",
+            this.tabTrapThemeMenu
+          );
           document.removeEventListener("keydown", this.forceCloseThemeMenu);
           document.removeEventListener("click", this.forceCloseThemeMenu);
         }
@@ -93,25 +108,34 @@ class ThemeSwitcher {
     if (options.forceClose) {
       this.toggle.setAttribute("aria-expanded", false);
       // set focus on toggle button after menu closes
-      this.toggle.focus();
-    } else {
-      const currentState =
-        this.toggle.getAttribute("aria-expanded") === "false" ? false : true;
-      this.toggle.setAttribute("aria-expanded", String(!currentState));
+      return this.toggle.focus();
     }
+
+    const currentState =
+      this.toggle.getAttribute("aria-expanded") === "false" ? false : true;
+    return this.toggle.setAttribute("aria-expanded", String(!currentState));
   }
 
-  tabTrapThemeMenu() {}
+  tabTrapThemeMenu(e) {
+    const firstStop = this.toggle;
+    const lastStop = this.themeOptions.item(this.themeOptions.length - 1);
+
+    if (e.target === firstStop && e.shiftKey && e.key === "Tab") {
+      // need to prevent default focus change because we are manually focusing on the desired element
+      e.preventDefault();
+      return lastStop.focus();
+    }
+    if (e.target === lastStop && !e.shiftKey && e.key === "Tab") {
+      e.preventDefault();
+      return firstStop.focus();
+    }
+  }
 
   forceCloseThemeMenu(e) {
     if (e.type === "keydown" && e.key === "Escape") {
       return this.toggleOptionDisplay({ forceClose: true });
     }
-    if (
-      e.type === "click" &&
-      !e.path.includes(this.themeMenu) &&
-      !e.path.includes(this.toggle)
-    ) {
+    if (e.type === "click" && !e.path.includes(this.themeSwitcher)) {
       return this.toggleOptionDisplay({ forceClose: true });
     }
   }
