@@ -25,11 +25,6 @@
     box-shadow: -1px 1px 5px get-color("text"), 1px -1px 5px get-color("text");
     background-color: get-color("bg");
     color: get-color("text");
-    transform-origin: right;
-    // need original values for transition to work both ways
-    opacity: 0;
-    transform: rotateY(90deg);
-    transition: transform 0.6s, opacity 0.5s;
   }
   &__heading {
     @include apply-utility("font", "main");
@@ -67,20 +62,8 @@
   }
 }
 
-[aria-expanded="true"] + .theme-switcher__options {
-  transform: rotateY(0deg);
-  opacity: 1;
-}
-
-[aria-expanded="false"] + .theme-switcher__options {
-  transform: rotateY(90deg);
-  opacity: 0;
-}
-
 // selected theme style
-[data-theme="default"] .theme-switcher__option[data-theme="default"],
-[data-theme="shire"] .theme-switcher__option[data-theme="shire"],
-[data-theme="galaxy"] .theme-switcher__option[data-theme="galaxy"] {
+.theme-switcher__option[aria-checked="true"] {
   border: var(--border-width) solid get-color("text");
   outline: var(--border-width) solid get-color("text");
   outline-offset: 0.1rem;
