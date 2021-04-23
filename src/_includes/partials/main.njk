@@ -4,7 +4,8 @@
       {% set listSection = section %}
       {% include './sectionSkills.njk'%}
     {% else %}
-      {% set collection = section.entries %}
+    {# order items from end date (consider ongoing if no end date) #}
+      {% set collection = section.entries | sort(attr='end_date') %}
       {% set title = section.title %}
       {% include './sectionEvents.njk'%}
     {% endif %}
