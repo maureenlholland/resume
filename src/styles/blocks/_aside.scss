@@ -6,8 +6,30 @@ aside {
     color: get-color("text");
     background: get-color("bg");
   }
+  // flex row columns on tablet size (un-do stack)
+  @include media-query("md") {
+    &.stack {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: calc(2 * #{var(--space)});
+      > * {
+        margin-top: 0;
+        padding-top: 0;
+        flex-shrink: 0;
+      }
+    }
+  }
   // when sidebar grid layout, stick content to right
+  // move from row to column
   @include media-query("lg") {
     text-align: right;
+    &.stack {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0;
+      > * {
+        padding-top: get-size("800");
+      }
+    }
   }
 }
