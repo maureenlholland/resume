@@ -38,14 +38,7 @@ permalink: '/css/themes.css'
 }
 
 {# Extra styles for Galaxy #}
-@keyframes twinkle {
-    from  { background-position: 0,0; }
-    to { background-position: -5000px 5000px; }
-}
-{# should lazy load or something to avoid defining keyframe unnecessarily #}
-
-{# twinkle effect thanks to this tutorial: https://www.script-tutorials.com/night-sky-with-twinkling-stars/ #}
-{# GPU working too hard with background-position animation. use canvas? #}
+{# todo: generative art for star background, animated #}
 [data-theme='galaxy'] body {
     background: #000 url("/images/stars.png") repeat top center;
 }
@@ -56,8 +49,28 @@ permalink: '/css/themes.css'
 [data-theme='galaxy'] #galaxy-language {
     display: block;
 }
-[data-theme='galaxy'] header,
-[data-theme='galaxy'] main {
-    background:transparent url("/images/twinkling.png") repeat top center;
-    {# animation:twinkle 400s linear infinite; #}
+
+{# Remove SVG elements on smaller screens #}
+[data-theme='shire'] .header-overlap,
+[data-theme='galaxy'] .header-overlap {
+    overflow-x: hidden;
+}
+{# unable to set one overflow axis to hidden and force visible on other axis for same element container #}
+[data-theme='shire'] .header-overlap__photo,
+[data-theme='galaxy'] .header-overlap__photo {
+    overflow-y: visible;
+}
+[data-theme='shire'] #pipe,
+[data-theme='galaxy'] #lightsaber {
+    display: none;
+}
+@media screen and (min-width: 400px) {
+    [data-theme='shire'] #pipe,
+    [data-theme='galaxy'] #lightsaber {
+        display: block;
+    }
+    [data-theme='shire'] .header-overlap,
+    [data-theme='galaxy'] .header-overlap {
+        overflow-x: visible;
+    }
 }
