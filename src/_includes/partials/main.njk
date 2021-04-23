@@ -1,13 +1,6 @@
 <main class="stack pad-horizontal pad-vertical">
-  {% for section in main.sections %}
-    {% if section.isList %}
-      {% set listSection = section %}
-      {% include './sectionSkills.njk'%}
-    {% else %}
-    {# order items from end date (consider ongoing if no end date) #}
-      {% set collection = section.entries | sort(attr='end_date') %}
-      {% set title = section.title %}
-      {% include './sectionEvents.njk'%}
-    {% endif %}
-  {% endfor %}
+  {# use section config from forestry to determine order (entry and skills sections) #}
+  {% set collection = collections.education %}
+  {% set title =  'Education' %}
+  {% include './sectionEvents.njk'%}
 </main>

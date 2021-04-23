@@ -38,10 +38,14 @@ module.exports = (config) => {
   // Use shortcode to process images with above plugin
   config.addNunjucksAsyncShortcode("image", imageShortcode);
 
-  // Collections to grab in templates
+  // Organization Collections
   config.addCollection("organizations", (collection) => {
     return collection.getFilteredByGlob("./src/organizations/*.md");
   });
+
+  // Entry Collections
+  // partition by tag (https://github.com/maureenlholland/resume/commit/b12acfee2cc952d580d4bfad437bef0bbfa7fc13)
+  // sort by end date
 
   // helper filter (TODO: refactor to dynamically add all filters)
   // Credit: Max Böck Theme Switcher
