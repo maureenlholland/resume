@@ -27,12 +27,14 @@ permalink: '/css/themes.css'
     background-image: url("/images/paper-bg.jpg");
     background-blend-mode: hard-light;
 }
-
-[data-theme='shire'] #shire.photo__themes {
+[data-theme='shire'] #shire-overlay {
     display: block;
     width: 115%;
     top: 55%;
     left: 19%;
+}
+[data-theme='shire'] #shire-language {
+    display: block;
 }
 
 {# Extra styles for Galaxy #}
@@ -47,9 +49,12 @@ permalink: '/css/themes.css'
 [data-theme='galaxy'] body {
     background: #000 url("/images/stars.png") repeat top center;
 }
-[data-theme='galaxy'] #galaxy.photo__themes {
+[data-theme='galaxy'] #galaxy-overlay {
     display: block;
     left: -35%;
+}
+[data-theme='galaxy'] #galaxy-language {
+    display: block;
 }
 [data-theme='galaxy'] header,
 [data-theme='galaxy'] main {
