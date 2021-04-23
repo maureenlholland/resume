@@ -52,3 +52,12 @@ h1 {
     font-size: get-size("major");
   }
 }
+
+abbr {
+  text-decoration: none;
+  cursor: help;
+}
+
+.theme-language {
+  display: none;
+}
