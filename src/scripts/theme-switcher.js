@@ -151,15 +151,6 @@ class ThemeSwitcher {
       }
     });
 
-    // todo, change to overlay with z-index stacking updates
-    const pans = {
-      galaxy: 840,
-      shire: 4120,
-      default: 2500,
-    };
-
-    this.svg.setAttribute("viewBox", `${pans[id]} -50 450 2376`);
-
     if (this.hasLocalStorage) {
       localStorage.setItem(THEME_STORAGE_KEY, id);
     }

@@ -28,6 +28,13 @@ permalink: '/css/themes.css'
     background-blend-mode: hard-light;
 }
 
+[data-theme='shire'] #shire.photo__themes {
+    display: block;
+    width: 115%;
+    top: 55%;
+    left: 19%;
+}
+
 {# Extra styles for Galaxy #}
 @keyframes twinkle {
     from  { background-position: 0,0; }
@@ -40,8 +47,11 @@ permalink: '/css/themes.css'
 [data-theme='galaxy'] body {
     background: #000 url("/images/stars.png") repeat top center;
 }
+[data-theme='galaxy'] #galaxy.photo__themes {
+    display: block;
+}
 [data-theme='galaxy'] header,
 [data-theme='galaxy'] main {
     background:transparent url("/images/twinkling.png") repeat top center;
-    animation:twinkle 400s linear infinite;
+    {# animation:twinkle 400s linear infinite; #}
 }
