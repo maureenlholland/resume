@@ -27,5 +27,6 @@ fields:
   name: countryAbbr
   label: Country Abbreviation
 pages:
+- src/organizations/institut-de-physique-des-2-infinis.md
 - src/organizations/mcgill-university.md
 - src/organizations/middle-east-technical-university-metu.md
