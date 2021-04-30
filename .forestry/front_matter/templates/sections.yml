@@ -1,0 +1,10 @@
+---
+label: Sections
+hide_body: true
+fields:
+- type: list
+  name: order
+  label: order
+- type: text
+  name: insertSkills
+  label: insertSkills
