@@ -2,31 +2,38 @@
   "sections": [
     {
       "id": "education",
-      "title": "Education"
+      "title": "Education",
+      "type": "Education"
     },
     {
       "id": "research",
-      "title": "Research Experience"
+      "title": "Research Experience",
+      "type": "Experience"
     },
     {
       "id": "teaching",
-      "title": "Teaching Experience"
+      "title": "Teaching Experience",
+      "type": "Experience"
     },
     {
       "id": "skills",
-      "title": "Skills"
+      "title": "Skills",
+      "type": ""
     },
     {
       "id": "talks",
-      "title": "Talks & Workshops"
+      "title": "Talks & Workshops",
+      "type": "Experience"
     },
     {
       "id": "awards",
-      "title": "Grants & Awards"
+      "title": "Grants & Awards",
+      "type": "Experience"
     },
     {
       "id": "outreach",
-      "title": "Outreach & Activities"
+      "title": "Outreach & Activities",
+      "type": "Experience"
     }
   ]
 }

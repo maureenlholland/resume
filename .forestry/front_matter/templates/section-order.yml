@@ -27,3 +27,5 @@ fields:
         path: 
     label: type
     description: Important for accurate schema parsing
+pages:
+- src/_data/order.json
