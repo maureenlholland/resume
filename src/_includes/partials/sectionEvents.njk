@@ -1,21 +1,23 @@
+  {% if collection.length === 0 %}
+    return;
+  {% endif %}
   <section>
     <h2 data-title={{title}} class="section-title">{{ title }}</h2>
     <ol class="reset-list stack">
       {% for item in collection %}
-      {{ item.title | dump }}
       <li class="p-event h-event">
         <article class="entry">
           <div>
-            <time class="dt-start | entry__start" datetime="{{ item.start_date }}">{{ item.start_date | formatDate('yyyy') }}</time>
-            {% if item.end_date %}
-                <time class="dt-end | entry__end" datetime="{{ item.end_date }}">- {{ item.end_date | formatDate('yyyy') }}</time>
+            <time class="dt-start | entry__start" datetime="{{ item.data.start_date }}">{{ item.data.start_date | formatDate('yyyy') }}</time>
+            {% if item.data.end_date %}
+                <time class="dt-end | entry__end" datetime="{{ item.data.end_date }}">- {{ item.data.end_date | formatDate('yyyy') }}</time>
             {% else %}
                <span class="entry__end">- Current</span>
             {% endif %}
           </div>
           <div>
-          <h3 class="p-name | entry__title">{{ item.title }}</h3>
-          {% set organization = helpers.getOrganization(item.organization, collections.organizations) %}
+          <h3 class="p-name | entry__title">{{ item.data.title }}</h3>
+          {% set organization = helpers.getOrganization(item.data.organization, collections.organizations) %}
           {# include organization macro template, pass in organization #}
           <p class="p-org h-card | entry__org">
             <span class="p-name">{{ organization.data.title }}</span>
@@ -34,6 +36,9 @@
                 <span class="p-country">{{organization.data.country}}</span>.
             {% endif %}
           </p>
+          {% if item.templateContent %}
+            <small class="p-note">{{ item.templateContent | safe }}</small>
+          {% endif %}
           </div>
         </article>
       </li>

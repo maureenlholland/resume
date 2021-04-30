@@ -53,16 +53,10 @@ module.exports = (config) => {
   // Create collections for each entry directory
   entryCollections.forEach((dirName) => {
     config.addCollection(dirName, function (collection) {
-      // credit: Max Böck Resume
-      const byStartDate = (a, b) => {
-        if (a.data.start_date && b.data.start_date) {
-          return a.data.start_date - b.data.start_date;
-        }
-        return 0;
-      };
+      // TODO sort by end date? if no end date, take current time
       return collection
         .getFilteredByGlob(`./src/entries/${dirName}/*.md`)
-        .sort(byStartDate);
+        .sort((a, b) => b.data.start_date - a.data.start_date); // sort descending
     });
   });
 
@@ -70,9 +64,12 @@ module.exports = (config) => {
   // Credit: Max Böck Theme Switcher
   config.addFilter("findById", (array, id) => array.find((i) => i.id === id));
   // Credit: Max Böck Resume
-  config.addFilter("formatDate", (date, format) =>
-    DateTime.fromISO(date, { zone: "utc" }).toFormat(String(format))
-  );
+  config.addFilter("formatDate", (date, format) => {
+    console.log(date);
+    console.log(format);
+    console.log(DateTime.fromISO(date, { zone: "utc" }));
+    return DateTime.fromJSDate(date, { zone: "utc" }).toFormat(String(format));
+  });
 
   return {
     markdownTemplateEngine: "njk",

@@ -6,7 +6,9 @@
      {% include './sectionSkills.njk'%}
     {% else %}
       {% set collection = collections[section.id] %}
-      {% include './sectionEvents.njk'%}
+      {% if collection.length > 0 %}
+        {% include './sectionEvents.njk'%}
+      {% endif %}
     {% endif %}
   {% endfor %}
 </main>
