@@ -39,3 +39,5 @@ fields:
       file: 
       path: 
   label: Organization
+pages:
+- src/entries/teaching/teaching-assistant.md
