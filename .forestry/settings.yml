@@ -7,6 +7,9 @@ sections:
   - type: document
     path: src/_data/general.json
     label: General
+    - type: document
+    path: src/_data/sections.json
+    label: Configure Sections
   - type: directory
     path: src/organizations
     label: Organizations

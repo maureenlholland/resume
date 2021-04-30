@@ -2,10 +2,6 @@
 label: Entries
 hide_body: false
 fields:
-- type: field_group_list
-  name: entries
-  label: Entries
-  fields:
   - name: title
     type: text
     config:
@@ -13,22 +9,22 @@ fields:
     label: Title
   - name: start_date
     type: datetime
-    description: ''
+    description: ""
     config:
       required: true
       date_format: YYYY-MM-DD
-      time_format: ''
+      time_format: ""
       display_utc: true
       export_format: YYYY-MM-DD
     label: Start Date
   - name: end_date
     type: datetime
     label: End Date
-    description: ''
+    description: ""
     config:
       required: false
       date_format: YYYY-MM-DD
-      time_format: 
+      time_format:
       display_utc: false
       export_format: YYYY-MM-DD
   - name: organization
@@ -40,6 +36,6 @@ fields:
       source:
         type: pages
         section: organizations-313013d0-7a26-4266-bc94-b4d1ac37ed67
-        file: 
-        path: 
+        file:
+        path:
     label: Organization
