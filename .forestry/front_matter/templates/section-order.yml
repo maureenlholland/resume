@@ -12,3 +12,18 @@ fields:
   - type: text
     name: title
     label: title
+  - name: type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Education
+      - Experience
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: type
+    description: Important for accurate schema parsing
