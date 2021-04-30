@@ -2,6 +2,7 @@
     <h2 data-title={{title}} class="section-title">{{ title }}</h2>
     <ol class="reset-list stack">
       {% for item in collection %}
+      {{ item.title | dump }}
       <li class="p-event h-event">
         <article class="entry">
           <div>

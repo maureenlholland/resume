@@ -1,5 +1,6 @@
 const Image = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
+const { readdirSync } = require("fs");
 
 // 11ty plugin to generate multiple image sizes and formats: https://www.11ty.dev/docs/plugins/image/
 async function imageShortcode(src, alt, sizes) {
@@ -44,8 +45,26 @@ module.exports = (config) => {
   });
 
   // Entry Collections
-  // partition by tag (https://github.com/maureenlholland/resume/commit/b12acfee2cc952d580d4bfad437bef0bbfa7fc13)
-  // sort by end date
+  // Get all directory names from entries directory
+  // credit: https://stackoverflow.com/questions/18112204/get-all-directories-within-directory-nodejs
+  const entryCollections = readdirSync("./src/entries", { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
+  // Create collections for each entry directory
+  entryCollections.forEach((dirName) => {
+    config.addCollection(dirName, function (collection) {
+      // credit: Max Böck Resume
+      const byStartDate = (a, b) => {
+        if (a.data.start_date && b.data.start_date) {
+          return a.data.start_date - b.data.start_date;
+        }
+        return 0;
+      };
+      return collection
+        .getFilteredByGlob(`./src/entries/${dirName}/*.md`)
+        .sort(byStartDate);
+    });
+  });
 
   // helper filter (TODO: refactor to dynamically add all filters)
   // Credit: Max Böck Theme Switcher
