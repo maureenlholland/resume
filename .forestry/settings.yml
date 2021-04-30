@@ -45,6 +45,30 @@ sections:
     new_doc_ext: md
     templates:
       - entry
+  - type: directory
+    path: src/entries/talks
+    label: Talks
+    create: documents
+    match: "**/*.md"
+    new_doc_ext: md
+    templates:
+      - entry
+  - type: directory
+    path: src/entries/awards
+    label: Awards
+    create: documents
+    match: "**/*.md"
+    new_doc_ext: md
+    templates:
+      - entry
+  - type: directory
+    path: src/entries/outreach
+    label: Outreach
+    create: documents
+    match: "**/*.md"
+    new_doc_ext: md
+    templates:
+      - entry
 upload_dir: src/images
 public_path: images
 front_matter_path: ""
