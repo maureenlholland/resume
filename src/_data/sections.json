@@ -1,4 +1,8 @@
 {
-  "order": ["education"],
-  "insertSkills": 4
+  "order": [
+    "research",
+    "teaching",
+    "education"
+  ],
+  "insertSkills": "3"
 }

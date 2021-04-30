@@ -1,53 +1,53 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: ""
-webhook_url:
+admin_path: ''
+webhook_url: 
 sections:
-  - type: document
-    path: src/_data/general.json
-    label: General
-  - type: document
-    path: src/_data/sections.json
-    label: Configure Sections
-  - type: directory
-    path: src/organizations
-    label: Organizations
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - organization
-  - type: document
-    path: src/_data/skills.json
-    label: Skills
-  - type: directory
-    path: src/entries/education
-    label: Education
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - entry
-  - type: directory
-    path: src/entries/teaching
-    label: Teaching
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - entry
-  - type: directory
-    path: src/entries/research
-    label: Research
-    create: documents
-    match: "**/*.md"
-    new_doc_ext: md
-    templates:
-      - entry
+- type: document
+  path: src/_data/general.json
+  label: General
+- type: document
+  path: src/_data/sections.json
+  label: Configure Sections
+- type: directory
+  path: src/organizations
+  label: Organizations
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - organization
+- type: document
+  path: src/_data/skills.json
+  label: Skills
+- type: directory
+  path: src/entries/education
+  label: Education
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - entry
+- type: directory
+  path: src/entries/teaching
+  label: Teaching
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - entry
+- type: directory
+  path: src/entries/research
+  label: Research
+  create: documents
+  match: "**/*.md"
+  new_doc_ext: md
+  templates:
+  - entry
 upload_dir: src/images
 public_path: images
-front_matter_path: ""
+front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
