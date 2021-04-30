@@ -1,18 +1,6 @@
 {
   "sections": [
     {
-      "id": "outreach",
-      "title": "Outreach & Activities"
-    },
-    {
-      "id": "awards",
-      "title": "Grants & Awards"
-    },
-    {
-      "id": "talks",
-      "title": "Talks & Workshops"
-    },
-    {
       "id": "education",
       "title": "Education"
     },
@@ -27,6 +15,18 @@
     {
       "id": "skills",
       "title": "Skills"
+    },
+    {
+      "id": "talks",
+      "title": "Talks & Workshops"
+    },
+    {
+      "id": "awards",
+      "title": "Grants & Awards"
+    },
+    {
+      "id": "outreach",
+      "title": "Outreach & Activities"
     }
   ]
 }
