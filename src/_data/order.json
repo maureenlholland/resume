@@ -1,0 +1,20 @@
+{
+  "sections": [
+    {
+      "id": "education",
+      "title": "Education"
+    },
+    {
+      "id": "research",
+      "title": "Research Experience"
+    },
+    {
+      "id": "teaching",
+      "title": "Teaching Experience"
+    },
+    {
+      "id": "skills",
+      "title": "Skills"
+    }
+  ]
+}
