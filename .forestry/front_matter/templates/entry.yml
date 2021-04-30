@@ -40,5 +40,6 @@ fields:
       path: 
   label: Organization
 pages:
+- src/entries/education/quebec-inter-university-transfer-student.md
 - src/entries/research/postdoctoral-research-associate.md
 - src/entries/teaching/teaching-assistant.md
