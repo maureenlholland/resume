@@ -15,6 +15,9 @@ sections:
     new_doc_ext: md
     templates:
       - organization
+  - type: document
+    path: src/_data/skills.json
+    label: Skills
   - type: directory
     path: src/entries/education
     label: Education
