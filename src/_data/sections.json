@@ -1,8 +1,17 @@
 {
   "order": [
-    "research",
-    "teaching",
-    "education"
+    {
+      "folder": "research",
+      "title": "Research Experience"
+    },
+    {
+      "folder": "teaching",
+      "title": "Teaching Experience"
+    },
+    {
+      "folder": "education",
+      "title": "Education"
+    }
   ],
   "insertSkills": "3"
 }
