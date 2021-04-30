@@ -40,4 +40,5 @@ fields:
       path: 
   label: Organization
 pages:
+- src/entries/research/postdoctoral-research-associate.md
 - src/entries/teaching/teaching-assistant.md
