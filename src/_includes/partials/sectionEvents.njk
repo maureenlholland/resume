@@ -4,7 +4,7 @@
     <ol class="reset-list stack">
       {% for item in collection %}
       <li class="p-event h-event">
-        <article class="entry">
+        <article class="entry {{ type | lower }}">
           <div>
             <time class="dt-start | entry__start" datetime="{{ item.data.start_date }}">{{ item.data.start_date | formatDate('yyyy') }}</time>
             {% if item.data.end_date %}
@@ -35,7 +35,7 @@
             {% endif %}
           </p>
           {% if item.templateContent %}
-            <small class="p-note">{{ item.templateContent | safe }}</small>
+            <small class="p-summary">{{ item.templateContent | safe }}</small>
           {% endif %}
           </div>
         </article>
