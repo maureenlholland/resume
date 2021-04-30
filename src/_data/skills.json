@@ -1,0 +1,12 @@
+{
+  "skills": [
+    {
+      "title": "OS",
+      "list": ["MacOS", "Linux (Debian)"]
+    },
+    {
+      "list": ["C++", "Python"],
+      "title": "Programming"
+    }
+  ]
+}

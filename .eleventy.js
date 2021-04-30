@@ -1,5 +1,6 @@
 const Image = require("@11ty/eleventy-img");
 const { DateTime } = require("luxon");
+const { readdirSync } = require("fs");
 
 // 11ty plugin to generate multiple image sizes and formats: https://www.11ty.dev/docs/plugins/image/
 async function imageShortcode(src, alt, sizes) {
@@ -38,18 +39,34 @@ module.exports = (config) => {
   // Use shortcode to process images with above plugin
   config.addNunjucksAsyncShortcode("image", imageShortcode);
 
-  // Collections to grab in templates
+  // Organization Collections
   config.addCollection("organizations", (collection) => {
     return collection.getFilteredByGlob("./src/organizations/*.md");
+  });
+
+  // Entry Collections
+  // Get all directory names from entries directory
+  // credit: https://stackoverflow.com/questions/18112204/get-all-directories-within-directory-nodejs
+  const entryCollections = readdirSync("./src/entries", { withFileTypes: true })
+    .filter((dirent) => dirent.isDirectory())
+    .map((dirent) => dirent.name);
+  // Create collections for each entry directory
+  entryCollections.forEach((dirName) => {
+    config.addCollection(dirName, function (collection) {
+      // TODO sort by end date? if no end date, take current time
+      return collection
+        .getFilteredByGlob(`./src/entries/${dirName}/*.md`)
+        .sort((a, b) => b.data.start_date - a.data.start_date); // sort descending
+    });
   });
 
   // helper filter (TODO: refactor to dynamically add all filters)
   // Credit: Max Böck Theme Switcher
   config.addFilter("findById", (array, id) => array.find((i) => i.id === id));
   // Credit: Max Böck Resume
-  config.addFilter("formatDate", (date, format) =>
-    DateTime.fromISO(date, { zone: "utc" }).toFormat(String(format))
-  );
+  config.addFilter("formatDate", (date, format) => {
+    return DateTime.fromJSDate(date, { zone: "utc" }).toFormat(String(format));
+  });
 
   return {
     markdownTemplateEngine: "njk",

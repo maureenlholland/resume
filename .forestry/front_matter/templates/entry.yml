@@ -2,44 +2,45 @@
 label: Entries
 hide_body: false
 fields:
-- type: field_group_list
-  name: entries
-  label: Entries
-  fields:
-  - name: title
-    type: text
-    config:
-      required: true
-    label: Title
-  - name: start_date
-    type: datetime
-    description: ''
-    config:
-      required: true
-      date_format: YYYY-MM-DD
-      time_format: ''
-      display_utc: true
-      export_format: YYYY-MM-DD
-    label: Start Date
-  - name: end_date
-    type: datetime
-    label: End Date
-    description: ''
-    config:
-      required: false
-      date_format: YYYY-MM-DD
-      time_format: 
-      display_utc: false
-      export_format: YYYY-MM-DD
-  - name: organization
-    type: select
-    default: []
-    config:
-      required: false
-      options: []
-      source:
-        type: pages
-        section: organizations-313013d0-7a26-4266-bc94-b4d1ac37ed67
-        file: 
-        path: 
-    label: Organization
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: start_date
+  type: datetime
+  description: ''
+  config:
+    required: true
+    date_format: YYYY-MM-DD
+    time_format: ''
+    display_utc: true
+    export_format: YYYY-MM-DD
+  label: Start Date
+- name: end_date
+  type: datetime
+  label: End Date
+  description: ''
+  config:
+    required: false
+    date_format: YYYY-MM-DD
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DD
+- name: organization
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: organizations
+      file: 
+      path: 
+  label: Organization
+pages:
+- src/entries/education/bsc.in-honours-physics.md
+- src/entries/education/quebec-inter-university-transfer-student.md
+- src/entries/research/postdoctoral-research-associate.md
+- src/entries/teaching/teaching-assistant.md

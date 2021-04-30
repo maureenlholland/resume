@@ -1,12 +1,14 @@
 <main class="stack pad-horizontal pad-vertical">
-  {% for section in main.sections %}
-    {% if section.isList %}
-      {% set listSection = section %}
-      {% include './sectionSkills.njk'%}
+  {% for section in order.sections %}
+    {% set title = section.title %}
+    {% if section.id === 'skills' %}
+      {% set listSection = skills %}
+     {% include './sectionSkills.njk'%}
     {% else %}
-      {% set collection = section.entries %}
-      {% set title = section.title %}
-      {% include './sectionEvents.njk'%}
+      {% set collection = collections[section.id] %}
+      {% if collection.length > 0 %}
+        {% include './sectionEvents.njk'%}
+      {% endif %}
     {% endif %}
   {% endfor %}
 </main>

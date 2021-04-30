@@ -28,3 +28,4 @@ fields:
   label: Country Abbreviation
 pages:
 - src/organizations/mcgill-university.md
+- src/organizations/middle-east-technical-university-metu.md
