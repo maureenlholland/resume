@@ -65,9 +65,6 @@ module.exports = (config) => {
   config.addFilter("findById", (array, id) => array.find((i) => i.id === id));
   // Credit: Max Böck Resume
   config.addFilter("formatDate", (date, format) => {
-    console.log(date);
-    console.log(format);
-    console.log(DateTime.fromISO(date, { zone: "utc" }));
     return DateTime.fromJSDate(date, { zone: "utc" }).toFormat(String(format));
   });
 
