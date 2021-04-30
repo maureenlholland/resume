@@ -1,6 +1,10 @@
 {
   "sections": [
     {
+      "id": "awards",
+      "title": "Grants & Awards"
+    },
+    {
       "id": "talks",
       "title": "Talks & Workshops"
     },
