@@ -39,6 +39,11 @@ fields:
       file: 
       path: 
   label: Organization
+- name: permalink
+  type: boolean
+  label: Permalink
+  default: false
+  hidden: true
 pages:
 - src/entries/education/bsc.in-honours-physics.md
 - src/entries/education/quebec-inter-university-transfer-student.md
