@@ -61,3 +61,10 @@ abbr {
 .theme-language {
   display: none;
 }
+
+// override default MathJax style
+mjx-container[jax="CHTML"][display="true"] {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+}
