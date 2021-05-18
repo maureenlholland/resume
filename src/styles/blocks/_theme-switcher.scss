@@ -8,10 +8,16 @@
     cursor: pointer;
   }
   &__display {
+    width: get-size("800");
+    height: get-size("800");
+    background: gainsboro;
+    border: 1px solid black;
     aspect-ratio: 1/1;
     border-radius: 50%;
     display: flex;
-    margin-left: auto;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto; // this is necessary to keep it on right side of screen when options menu opens
     position: relative;
     svg {
       align-self: center;
