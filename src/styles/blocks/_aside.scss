@@ -11,11 +11,14 @@ aside {
     &.stack {
       flex-direction: row;
       flex-wrap: wrap;
-      gap: calc(2 * #{var(--space)});
       > * {
+        margin-right: calc(2 * #{var(--space)});
         margin-top: 0;
         padding-top: 0;
         flex-shrink: 0;
+        &:first-of-type {
+          margin-bottom: calc(2 * #{var(--space)});
+        }
       }
     }
   }
@@ -29,6 +32,10 @@ aside {
       gap: 0;
       > * {
         padding-top: get-size("800");
+        margin-right: 0;
+        &:first-of-type {
+          margin-bottom: 0;
+        }
       }
     }
   }
