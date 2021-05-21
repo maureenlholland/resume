@@ -55,8 +55,12 @@ class ThemeSwitcher {
   handleThemeMenu(mutationsList) {
     // Use traditional 'for loops' for IE 11
     for (const mutation of mutationsList) {
-      if (mutation.type === "attributes") {
-        if (mutation.target.ariaExpanded === "true") {
+      if (mutation.attributeName === "aria-expanded") {
+        // NOTE: nodeValue returns a STRING, not BOOLEAN value
+        if (
+          mutation.target.attributes.getNamedItem("aria-expanded").nodeValue ===
+          "true"
+        ) {
           /*
             When theme menu is expanded
             - blur background
@@ -135,8 +139,12 @@ class ThemeSwitcher {
     if (e.type === "keydown" && e.key === "Escape") {
       return this.toggleOptionDisplay({ forceClose: true });
     }
-    if (e.type === "click" && !e.path.includes(this.themeSwitcher)) {
-      return this.toggleOptionDisplay({ forceClose: true });
+    if (e.type === "click") {
+      // composedPath does not work in IE so clicking outside the modal to close will not be available in IE
+      const path = e.composedPath && e.composedPath();
+      if (path && !path.includes(this.themeSwitcher)) {
+        return this.toggleOptionDisplay({ forceClose: true });
+      }
     }
   }
 
