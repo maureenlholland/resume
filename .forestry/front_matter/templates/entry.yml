@@ -45,6 +45,7 @@ fields:
   default: false
   hidden: true
 pages:
+- src/entries/awards/marie-sklodowska-curie-action-early-stage-researcher-grant.md
 - src/entries/education/bsc.in-honours-physics.md
 - src/entries/education/quebec-inter-university-transfer-student.md
 - src/entries/outreach/stem-sights-interview.md
