@@ -1,5 +1,5 @@
 ---
-organization: []
+organization: src/organizations/queen-s-university.md
 title: Differentiating $$ U(1)' $$ supersymmetric models with right sneutrino and
   neutralino dark matter
 start_date: 2017-05-03
