@@ -2,15 +2,18 @@
   display: flex;
   flex-wrap: wrap;
   > *:first-of-type {
-    flex-basis: 14ch;
-    flex-grow: 0;
+    flex-basis: 10ch;
+    flex-grow: 1;
+    @include media-query("md") {
+      flex-grow: 0;
+    }
     flex-shrink: 0;
     margin-bottom: var(--space);
   }
   > *:last-of-type {
     padding-inline-start: var(--space);
     border-left: 4px dotted var(--color-text);
-    flex-basis: 70%;
+    flex-basis: 80%;
     flex-grow: 1;
     flex-shrink: 0;
   }
