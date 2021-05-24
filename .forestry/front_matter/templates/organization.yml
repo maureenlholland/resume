@@ -28,6 +28,7 @@ fields:
   label: Country Abbreviation
 pages:
 - src/organizations/desy.md
+- src/organizations/infn-laboratori-nazionali-di-frascati.md
 - src/organizations/institut-de-physique-des-2-infinis.md
 - src/organizations/lpthe-sorbonne-university.md
 - src/organizations/mcgill-university.md
