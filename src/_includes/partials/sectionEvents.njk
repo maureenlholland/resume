@@ -18,6 +18,7 @@
           <div>
           <h3 class="p-name | entry__title">{{ item.data.title }}</h3>
           {% set organization = helpers.getOrganization(item.data.organization, collections.organizations) %}
+          {% if organization %}
           {# include organization macro template, pass in organization #}
           <p class="p-org h-card | entry__org">
             <span class="p-name">{{ organization.data.title }}</span>
@@ -36,6 +37,7 @@
                 <span class="p-country">{{organization.data.country}}</span>.
             {% endif %}
           </p>
+          {% endif %}
           {% if item.templateContent %}
             <small class="p-summary">{{ item.templateContent | safe }}</small>
           {% endif %}
