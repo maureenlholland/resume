@@ -6,9 +6,9 @@
       <li class="p-event h-event">
         <article class="entry {{ type | lower }}">
           <div>
-            <time class="dt-start | entry__start" datetime="{{ item.data.start_date }}">{{ item.data.start_date | formatDate('yyyy') }}</time>
+            <time class="dt-start | entry__start" datetime="{{ item.data.start_date }}">{{ item.data.start_date | formatDate('MMM yyyy') }}</time>
             {% if item.data.end_date %}
-                <time class="dt-end | entry__end" datetime="{{ item.data.end_date }}">- {{ item.data.end_date | formatDate('yyyy') }}</time>
+                <time class="dt-end | entry__end" datetime="{{ item.data.end_date }}">- {{ item.data.end_date | formatDate('MMM yyyy') }}</time>
             {% else %}
                <span class="entry__end">- Current</span>
             {% endif %}

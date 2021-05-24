@@ -32,7 +32,7 @@ module.exports = (config) => {
   config.addWatchTarget("./src/styles/");
   config.addWatchTarget("./src/_data/themes.json");
 
-  // Don't create a page for images/index.html
+  // Don't create an index.html for these folders, send straight to /dist as is
   config.addPassthroughCopy("./src/images/");
   config.addPassthroughCopy("./src/theme-fonts/");
 
@@ -51,12 +51,17 @@ module.exports = (config) => {
     .filter((dirent) => dirent.isDirectory())
     .map((dirent) => dirent.name);
   // Create collections for each entry directory
+  // Sort by end date, but use today's date to sort if no end date
+  const today = new Date();
   entryCollections.forEach((dirName) => {
     config.addCollection(dirName, function (collection) {
-      // TODO sort by end date? if no end date, take current time
       return collection
         .getFilteredByGlob(`./src/entries/${dirName}/*.md`)
-        .sort((a, b) => b.data.start_date - a.data.start_date); // sort descending
+        .sort((a, b) => {
+          const endA = a.data.end_date || today;
+          const endB = b.data.end_date || today;
+          return endB - endA;
+        });
     });
   });
 
