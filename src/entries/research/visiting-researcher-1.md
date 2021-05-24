@@ -1,5 +1,5 @@
 ---
-organization: []
+organization: src/organizations/lpthe-sorbonne-university.md
 title: Visiting Researcher
 start_date: 2018-01-02
 end_date: 2019-03-29
