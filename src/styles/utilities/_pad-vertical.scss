@@ -1,6 +1,0 @@
-.pad-vertical {
-  // probably move to responsive config for pad right and left, shared with header-overlap
-  --pad-vertical: #{get-size("800")};
-  padding-top: var(--pad-vertical);
-  padding-bottom: var(--pad-vertical);
-}
