@@ -1,0 +1,106 @@
+
+
+@media print { 
+    
+    :root {
+        --color-bg: #ffffff;
+        --color-text: #0e1111;
+        --font-main: Poppins, sans-serif;
+        --font-accent: Poppins, sans-serif;
+        --overlap: 0;
+    }
+
+    
+    * {
+        overflow: visible;
+    }
+
+    
+    body {
+        background-image: none !important;
+        background-blend-mode: none !important;
+    }
+
+    
+    [data-switcher-open="true"] header,
+    [data-switcher-open="true"] aside,
+    [data-switcher-open="true"] main {
+        filter: blur(0) !important;
+    }
+
+    
+    aside {
+        background-color: var(--color-bg) !important;
+        color: var(--color-text) !important;
+        padding-top: var(--pad-vertical) !important;
+        text-align: left !important;
+    }
+
+    
+    .sidebar-grid {
+        grid-template-columns: 1fr !important;
+        grid-template-areas:
+        "header"
+        "sidebar"
+        "main" !important;
+    }
+
+    
+    .theme-switcher,
+    .header-overlap__photo {
+        display: none !important;
+    }
+
+    
+    .header-overlap__title {
+        font-size: get-size('700') !important;
+    }
+
+    
+    .header-overlap__title:before {
+        content: '' !important;
+    }
+
+    
+    .header-overlap__subtitle {
+        border-top: 4px solid var(--color-text);
+        border-bottom: 4px solid var(--color-text);
+    }
+
+    
+    .header-overlap__title,
+    .header-overlap__subtitle {
+        margin-top: 0 !important;
+        padding-left: 0 !important;
+        text-align: left !important;
+    }
+
+    
+    header {
+        padding-top: 0 !important;
+    }
+    header,
+    aside {
+        padding-bottom: 0 !important;
+    }
+
+    
+    .p-contact {
+        display: flex !important;
+        flex-direction: row-reverse !important;
+        flex-wrap: wrap !important;
+        justify-content: flex-end !important;
+    }
+
+    aside.stack > *+* {
+        margin-top: 0 !important;
+    }
+
+    .p-contact h2 {
+        width: 100% !important;
+    }
+
+    .p-contact address {
+        margin-inline-start: var(--pad-horizontal);
+    }
+}

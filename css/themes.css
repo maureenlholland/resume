@@ -1,0 +1,95 @@
+
+:root {
+    
+    --color-bg: #ffffff;
+    --color-text: #0e1111;
+    --font-main: Poppins, sans-serif;
+    --font-accent: Poppins, sans-serif;
+    --overlap: 313px
+
+}
+
+
+[data-theme='default'] {
+    
+    --color-bg: #ffffff;
+    --color-text: #0e1111;
+    --font-main: Poppins, sans-serif;
+    --font-accent: Poppins, sans-serif;
+    --overlap: 313px
+
+}
+
+[data-theme='shire'] {
+    
+    --color-bg: #d1be9e;
+    --color-text: #50381f;
+    --font-main: Poppins, sans-serif;
+    --font-accent: Middleearth, cursive;
+    --overlap: 250px
+
+}
+
+[data-theme='galaxy'] {
+    
+    --color-bg: #000000;
+    --color-text: #fdd254;
+    --font-main: Poppins, sans-serif;
+    --font-accent: SF Distant Galaxy, monospace;
+    --overlap: 250px
+
+}
+
+
+
+[data-theme='shire'] body {
+    background-image: url("/images/paper-bg.jpg");
+    background-blend-mode: hard-light;
+}
+[data-theme='shire'] #shire-overlay {
+    display: block;
+    width: 115%;
+    top: 55%;
+    left: 19%;
+}
+[data-theme='shire'] #shire-language {
+    display: block;
+}
+
+
+
+[data-theme='galaxy'] body {
+    background: #000 url("/images/stars.png") repeat top center;
+}
+[data-theme='galaxy'] #galaxy-overlay {
+    display: block;
+    left: -35%;
+}
+[data-theme='galaxy'] #galaxy-language {
+    display: block;
+}
+
+
+[data-theme='shire'] .header-overlap,
+[data-theme='galaxy'] .header-overlap {
+    overflow-x: hidden;
+}
+
+[data-theme='shire'] .header-overlap__photo,
+[data-theme='galaxy'] .header-overlap__photo {
+    overflow-y: visible;
+}
+[data-theme='shire'] #pipe,
+[data-theme='galaxy'] #lightsaber {
+    display: none;
+}
+@media screen and (min-width: 400px) {
+    [data-theme='shire'] #pipe,
+    [data-theme='galaxy'] #lightsaber {
+        display: block;
+    }
+    [data-theme='shire'] .header-overlap,
+    [data-theme='galaxy'] .header-overlap {
+        overflow-x: visible;
+    }
+}
