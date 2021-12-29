@@ -1,0 +1,39 @@
+---
+label: Organization
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: text
+  name: city
+  label: City
+- type: text
+  name: region
+  label: Region
+  config:
+    required: true
+- type: text
+  name: regionAbbr
+  label: Region Abbreviation
+- type: text
+  name: country
+  label: Country
+  config:
+    required: true
+- type: text
+  name: countryAbbr
+  label: Country Abbreviation
+pages:
+- src/organizations/desy.md
+- src/organizations/infn-laboratori-nazionali-di-frascati.md
+- src/organizations/institut-de-physique-des-2-infinis.md
+- src/organizations/korea-institute-for-advanced-study.md
+- src/organizations/lpthe-sorbonne-university.md
+- src/organizations/mcgill-university.md
+- src/organizations/middle-east-technical-university-metu.md
+- src/organizations/queen-s-university.md
+- src/organizations/universite-de-montreal.md
+- src/organizations/university-of-glasgow.md

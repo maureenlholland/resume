@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "Middleearth";
+  src: url("/theme-fonts/Middleearth.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SF Distant Galaxy";
+  src: url("/theme-fonts/SFDistantGalaxy.ttf") format("truetype");
+}
+
+:root {
+  --space: 1.5rem;
+  --photo-max: 250px;
+}
+
+body {
+  line-height: 1.5;
+  font-size: get-size("400");
+  background-color: get-color("bg");
+  color: get-color("text");
+  @include apply-utility("font", "main");
+  // High contrast selection
+  ::selection {
+    color: get-color("bg");
+    // TODO: Browser test selection colors, not using rgba might be an issue
+    background: get-color("text");
+  }
+}
+
+a {
+  color: currentColor;
+}
+
+:focus {
+  outline: 2px dashed currentColor;
+  outline-offset: 0.25rem;
+}
+
+[hidden="true"] {
+  display: none !important;
+}
+
+h1,
+h2,
+h3 {
+  @include apply-utility("font", "accent");
+}
+
+h1 {
+  font-size: get-size("700");
+  @include media-query("md") {
+    font-size: get-size("major");
+  }
+}
+
+abbr {
+  text-decoration: none;
+  cursor: help;
+}
+
+.theme-language {
+  display: none;
+}
+
+// override default MathJax style
+mjx-container[jax="CHTML"][display="true"] {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  text-align: left !important;
+  display: inline-block !important;
+}

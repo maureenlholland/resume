@@ -1,0 +1,16 @@
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills__title {
+  width: 100%;
+  margin-bottom: var(--space);
+}
+
+.skills__list {
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-right: calc(var(--space) * 2);
+}

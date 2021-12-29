@@ -1,0 +1,42 @@
+aside {
+  background-color: get-color("text");
+  color: get-color("bg");
+  // High contrast selection
+  ::selection {
+    color: get-color("text");
+    background: get-color("bg");
+  }
+  // flex row columns on tablet size (un-do stack)
+  @include media-query("md") {
+    &.stack {
+      flex-direction: row;
+      flex-wrap: wrap;
+      > * {
+        margin-right: calc(2 * #{var(--space)});
+        margin-top: 0;
+        padding-top: 0;
+        flex-shrink: 0;
+        &:first-of-type {
+          margin-bottom: calc(2 * #{var(--space)});
+        }
+      }
+    }
+  }
+  // when sidebar grid layout, stick content to right
+  // move from row to column
+  @include media-query("lg") {
+    text-align: right;
+    &.stack {
+      flex-direction: column;
+      flex-wrap: nowrap;
+      gap: 0;
+      > * {
+        padding-top: get-size("800");
+        margin-right: 0;
+        &:first-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{% set assetHash = helpers.random() %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    {% include "partials/meta.njk" %}
+    <link rel="stylesheet" href="/fonts/fonts.css?{{ assetHash }}" />
+    {# see https://www.filamentgroup.com/lab/async-css.html for media="print" explanation #}
+    <link rel="stylesheet" media="print" href="/css/themes.css?{{ assetHash }}" onload="this.media='all'" />
+    <link rel="stylesheet" media="print" href="/css/print.css?{{ assetHash }}"/>
+    <link rel="stylesheet" href="/css/main.css?{{ assetHash }}"/>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    <title>{{ site.title }}</title>
+     <script>(localStorage.getItem('theme')) && document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'))</script>
+  </head>
+  <body class="h-resume | sidebar-grid">
+      {% include "partials/themeSwitcher.njk" %}
+      {% include "partials/header.njk" %}
+      {% include "partials/aside.njk" %}
+      {% include "partials/main.njk" %}
+      {# Main JS Bundle #}
+       <script src="{{ '/js/main.js' | url }}" defer></script>
+  </body>
+</html>

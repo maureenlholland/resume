@@ -1,0 +1,16 @@
+.photo {
+  position: relative;
+  @include media-query("md") {
+    width: var(--photo-max);
+  }
+  img {
+    border-radius: 50%;
+    height: auto;
+  }
+}
+
+.photo__themes {
+  position: absolute;
+  width: 135%;
+  display: none;
+}

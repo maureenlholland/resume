@@ -1,0 +1,75 @@
+---
+label: Entries
+hide_body: false
+fields:
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+- name: start_date
+  type: datetime
+  description: ''
+  config:
+    required: true
+    date_format: YYYY-MM-DD
+    time_format: ''
+    display_utc: true
+    export_format: YYYY-MM-DD
+  label: Start Date
+- name: end_date
+  type: datetime
+  label: End Date
+  description: ''
+  config:
+    required: false
+    date_format: YYYY-MM-DD
+    time_format: 
+    display_utc: false
+    export_format: YYYY-MM-DD
+- name: organization
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: organizations-313013d0-7a26-4266-bc94-b4d1ac37ed67
+      file: 
+      path: 
+  label: Organization
+- name: permalink
+  type: boolean
+  label: Permalink
+  default: false
+  hidden: true
+pages:
+- src/entries/awards/j.w.mcconnell-memorial-graduate-fellowship.md
+- src/entries/awards/marie-sklodowska-curie-action-early-stage-researcher-grant.md
+- src/entries/awards/quebec-student-mobility-bursary.md
+- src/entries/awards/teb-student-scholarship.md
+- src/entries/education/bsc.in-honours-physics.md
+- src/entries/education/quebec-inter-university-transfer-student.md
+- src/entries/outreach/computational-talks.md
+- src/entries/outreach/member-president-of-physics-society.md
+- src/entries/outreach/president-of-concordia-graduate-physics-association.md
+- src/entries/outreach/stem-sights-interview.md
+- src/entries/research/marie-sklodowska-curie-early-stage-researcher.md
+- src/entries/research/postdoctoral-research-associate.md
+- src/entries/research/research-assistant.md
+- src/entries/research/scientific-software-developer.md
+- src/entries/research/summer-intern.md
+- src/entries/research/visiting-researcher-1.md
+- src/entries/research/visiting-researcher-2.md
+- src/entries/research/visiting-researcher.md
+- src/entries/talks/differentiating-u-1-supersymmetric-models-with-right-sneutrino-and-neutralino-dark-matter.md
+- src/entries/talks/e_6-5-times-10-3.md
+- src/entries/talks/leptophobic-z-bosons-in-supersymmetry-and-where-to-find-them.md
+- src/entries/talks/madanalysis-5-tutorial.md
+- src/entries/talks/the-second-madanalysis-5-workshop-on-lhc-recasting-korea.md
+- src/entries/teaching/co-supervised-an-undergraduate-student.md
+- src/entries/teaching/participated-with-the-supervision-of-an-msc.intern.md
+- src/entries/teaching/student-assistant.md
+- src/entries/teaching/teaching-assistant-1.md
+- src/entries/teaching/teaching-assistant.md

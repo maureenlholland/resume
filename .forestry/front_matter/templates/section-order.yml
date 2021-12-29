@@ -1,0 +1,31 @@
+---
+label: Section Order
+hide_body: true
+fields:
+- type: field_group_list
+  name: sections
+  label: sections
+  fields:
+  - type: text
+    name: id
+    label: id
+  - type: text
+    name: title
+    label: title
+  - name: type
+    type: select
+    default: []
+    config:
+      required: false
+      options:
+      - Education
+      - Experience
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: type
+    description: Important for accurate schema parsing
+pages:
+- src/_data/order.json

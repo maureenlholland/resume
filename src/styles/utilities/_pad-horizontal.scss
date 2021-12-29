@@ -1,0 +1,12 @@
+.pad-horizontal {
+  // probably move to responsive config for pad right and left, shared with header-overlap
+  --pad-horizontal: #{get-size("400")};
+  padding-right: var(--pad-horizontal);
+  padding-left: var(--pad-horizontal);
+  @include media-query("md") {
+    --pad-horizontal: #{get-size("600")};
+  }
+  @include media-query("lg") {
+    --pad-horizontal: #{get-size("800")};
+  }
+}
